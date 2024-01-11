@@ -1,0 +1,427 @@
+\documentclass[16pt]{report}
+\input{../preamble.tex}
+\usepackage[scr]{rsfso}
+
+
+\title{\Huge{Calcul 1}\\{MATH1400}\\{\textbf{Introduction}}}
+\author{\huge{Franz Girardin}}
+\date{\today}
+\lstset{inputencoding=utf8/latin1}
+
+            %%%%%%%%%%%%%%%%%  Sect.                          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{helvet}
+\titleformat{\chapter}
+  {\fontfamily{phv}\bfseries\huge} % format
+  {}                % label
+  {0pt}             % sep
+  {\color{myb}\huge}           % before-code
+
+
+
+\titleformat{\section}
+  {\normalfont\scshape}{\thesection}{1em}{}
+
+
+% Customizing the spacing for the chapter titles
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+
+\usepackage{mathpazo}
+
+% Allow hfill in math environment
+\newcommand{\specialcell}[1]{\ifmeasuring@#1\else\omit$\displaystyle#1$\ignorespaces\fi}
+
+% Allow you to do the non implication (implication barred)
+\newcommand{\notimplies}{%
+  \mathrel{{\ooalign{\hidewidth$\not\phantom{=}$\hidewidth\cr$\implies$}}}}
+
+
+
+\DeclareRobustCommand{\looongrightarrow}{%
+  \DOTSB\relbar\joinrel\relbar\joinrel\relbar\joinrel\rightarrow
+}
+
+\begin{document}
+\maketitle
+\pagebreak
+\tableofcontents 
+\pagebreak
+
+\pagebreak
+\begin{multicols*}{2}
+
+
+    \chapter{Suites infinies}
+
+    \section{Les suites \quad \texttt{\S Stewart 1.1}  }
+    \begin{Definitionx}{Suite}{}
+        Une suite est une \textbf{fonction} $\mathbb{N}^* 
+        \rightarrow \mathbb{R}$. 
+        Chaque suite accepte donc tous les \textbf{entiers naturels} 
+        non-nuls et engendre une séquence de \textbf{nombre réels} 
+        dans un ordre définit par la fonction.
+    \end{Definitionx}
+    \begin{Syntaxe}{Notation et terminologies d'une suite}{}
+        \begin{itemize}
+            \item  $\{a_n\}_{n\geq1} \Coloneqq a_1, a_2, \dots a_n$  
+            \item $a_{n+1} \Coloneqq$ Successeur de $a_n$ 
+            \item $a_{n-1} \Coloneqq$ Prédécesseur de $a_n$
+            \item \textbf{Définition à partir d'un rang $n_0$} : 
+                \begin{itemize}
+                    \item[$\blacktriangleright$] 
+                        $\{u_n\}_{n\geq n_0} \Coloneqq$ une \textbf{suite} 
+                        dont les termes sont définit après 
+                        $n_0 \in \mathbb{Z}$.
+                    \item[$\rhd$]  \textbf{Exemple} : 
+                        $\{\ln(n-1) \}_{n\geq 5}$   
+                        \begin{itemize}
+                            \item[$\blacktriangleright$] 
+                                $\ln(4), \ln(5), \ln(6), \dots$
+                        \end{itemize}
+                \end{itemize}
+        \end{itemize}
+    \end{Syntaxe}
+
+    
+    \section{Suites arithmétiques \quad \texttt{\S Stewart 1.1}}
+    \begin{Definitionx}{Suite Arithmétique}{SuiteArithmétique}
+        Une \textbf{suite arithmérique} est une suite de nombres où chacun 
+        d'eux, sauf le premier, est \textbf{la somme du précédent et d'un 
+        nombre fixe appelé} \textit{raison de la suite}. 
+    \end{Definitionx}
+
+    \begin{Syntaxe}{Notation et d'une suite arithmétique}{}
+        \begin{align*}
+                a_n \Coloneqq 
+                \begin{cases}
+                    a_1 = r  &\omit\hfill raison\\  
+                    a_{n} = a_{n-1} + r &\omit\hfill récurrence
+                \end{cases}
+        \end{align*}
+
+    \end{Syntaxe}
+
+    \begin{note}{}{}
+        La différence entre deux termes consécutifs d'une suite 
+        arithmétique est égale à la \textbf{raison de la suite} : 
+        \[ r = a_n - a_{n-1} | n \geq 2 \]
+    \end{note}
+
+    \begin{Concept}{Identifier le n-ième terme d'une suite arithmétique}{}
+        Le \textbf{n-ième terme d'une suite arithmétique} est donné par : 
+        \begin{align*}
+          a_n = a_1 \text{+} \left(n - 1\right)\cdot{n}  \; | \; n \geq 1 
+        \end{align*}
+    \end{Concept}
+
+
+    \section{Suites géométriques \quad \texttt{\S Stewart 1.1}  }
+    \begin{Definitionx}{Suite géométrique}{}
+    Une suite géométrique dépend du terme précédant et 
+    d'un terme non nul, la raison de la suite 
+    \end{Definitionx}
+
+
+        \begin{Syntaxe}{Notation et d'une suite géométrique}{}
+        \begin{align*}
+                a_n \Coloneqq 
+                \begin{cases}
+                    a_1 = r  &\omit\hfill raison\\  
+                    a_{n} = a_{n-1} \cdot r &\omit\hfill récurrence
+                \end{cases}
+        \end{align*}
+
+    \end{Syntaxe}
+
+
+    \begin{note}{}{}
+      \textit{Le quotient entre deux termes consécutifs} d'une suite 
+      géométrique est égale à la raison 
+      \begin{align*}
+        r = \frac{a_n}{a_{n-1}} \; | \; n \geq 2
+      \end{align*}
+    \end{note}
+
+
+    \begin{Concept}{Identifier le n-ième terme d'une suite géométrique}{}
+        Le n-ième terme d'une suite géométrique est donné par : \\
+        \begin{align*}
+        a_n = a_1r^{n - 1} \; | \; n \geq 1
+      \end{align*}
+    \end{Concept}
+
+    \begin{Theorem}{Convergence d'une suite géométrique}{}
+        
+    \end{Theorem}
+
+    \section{Limite d'une suite \quad \texttt{\S Stewart 1.1}  }
+
+    \paragraph{}
+    Soit toute valeur arbitrairement petite $\varepsilon \geq 0$ et une7 
+    certaine valeur $L \in \mathbb{R}$, s'il 
+    existe un certain rang $N \in \mathbb{N}^{*}$ à partir duquel 
+    pour tout $n \geq N$, toutes les différences correspondantes 
+    $|a_n - L|$ sont plus petites que $\varepsilon$, alors on dit que 
+    la suite $a_n$ a pour limite $L$. 
+
+
+    \paragraph{}
+    On dit qu'une suite $\{a_n\}$ a pour 
+    \textbf{limite} $L \in \mathbb{R}$ si on peut rendre ses termes 
+    aussi proche de $L$ qu'on le veut en prenant $n$ suffisamment grand. 
+
+
+
+    \begin{Definitionx}{Définition formelle de convergence d'une suite}{}
+      Une suite $\{ a_n \}$ a pour \textbf{limite} $L$ et on écrit 
+      \begin{align*}
+        \lim\limits_{n  \to  \infty}{a_n} = 
+        L \; \; \; \;\text{ou} \quad 
+        a \stackrel{n \to \infty}{\looongrightarrow} L 
+      \end{align*}
+      \textbf{si et seulement si}, 
+      \begin{align}
+        \forall\varepsilon > 0, \exists N\left( \varepsilon \right) > 0 : 
+        n > N\left( \varepsilon \right) \implies 
+        |a_n -L| < \varepsilon
+      \end{align}
+    \end{Definitionx}
+
+
+    \paragraph{}
+    On dit qu'une suite $\{a_n\}$ 
+    \textbf{diverge ou diverge vers $\infty$} 
+    si pour tout nombre $M \in \mathbb{R}$ il existe un rang
+    $N \in \mathbb{N}^{*}$ à partir duquel $a_n \geq M$ pour tout 
+    les entiers $n \geq N$ plus que ce rang. 
+
+
+    \paragraph{}
+    Plus simplement, on peut toujours trouver un entier non nul 
+    $N$ après lequel tous les entiers $n > N$ dans le domaine
+    de $\{ a_n \}$ ont une image $a_n$ plus grand qu'un certain 
+    $M \in \mathbb{R}$. 
+
+
+    \begin{Definitionx}{Définition formelle de divergence d'une suite}{}
+        Une suite $\{ a_n \}$ \textbf{diverge} et on écrit 
+      \begin{align*}
+        \lim\limits_{n  \to  \infty}{a_n} = 
+        \infty \; \; \; \;\text{ou} \quad 
+        a \stackrel{n \to \infty}{\looongrightarrow} \infty 
+      \end{align*}
+      \textbf{si et seulement si},  
+        \begin{align*}
+            \forall M \in \mathbb{R}, \exists N \in \mathbb{N}^{*} :
+            n > N \implies |a_n| > M 
+        \end{align*}
+    \end{Definitionx}   
+
+    \begin{corollary*}{}{}
+       Si $\lim\limits_{n\to+\infty}a_n  = \infty$, \textbf{alors}, 
+       \[ \lim\limits_{n\to+\infty}{\dfrac{1}{a_n}}  = 0  \]
+   \end{corollary*} 
+    
+
+   \begin{Preuve}{}{}
+        Soit \( a_n \) une suite telle que 
+        \( \lim\limits_{n\to+\infty}a_n = \infty \). 
+        Nous voulons montrer que 
+        \[ \lim\limits_{n\to+\infty}\dfrac{1}{a_n} = 0 \]
+        
+        Selon la définition de la limite, pour tout \( \varepsilon > 0 \),
+        il doit exister un entier naturel \( N \) tel que pour tout 
+        \( n \geq N \), 
+        \[ \left|\frac{1}{a_n} - 0\right| < \varepsilon \].
+        
+        Puisque \( a_n \to \infty \), pour un \( \varepsilon > 0 \) donné,
+        il existe nécessairement un \( N \) tel que pour tout \( n \geq N \),
+        \( a_n > \frac{1}{\varepsilon} \). Et nous savons que si 
+        $a_n > \frac{1}{\varepsilon}$, alors,
+        \( \frac{1}{a_n} < \varepsilon \).
+        \vspace{1em}\\
+        Cela prouve que 
+        \( \lim\limits_{n\to+\infty}\dfrac{1}{a_n} = 0 \), 
+        conformément à la définition de la limite d'une suite. \qed
+    \end{Preuve}
+    \begin{note}{}{}
+        La réciproque du corollaire n'est pas vraie. Autrement dit  
+        \begin{align*}
+            \lim\limits_{n\to\infty}\frac{1}{a_n} = 0 
+            \textcolor{red}{\notimplies}
+            \lim\limits_{n\to+\infty}a_n  = \infty
+        \end{align*}    
+    \end{note}
+
+
+    \columnbreak
+    \begin{Lemme}{}{}
+
+        \begin{enumerate}
+            \item \underline{Lorsque $a_n$ est éventuellement positive}
+                \vspace{1em}\\
+                Si $\{ a_n \}$ est une suite 
+                \textbf{éventuellement positive}, 
+                alors,  
+
+                \begin{align*}
+                    \lim\limits_{n\to+\infty}\frac{1}{a_n}  = 0 
+                    \implies 
+                    \lim\limits_{n\to+\infty}a_n  = \infty
+                \end{align*}
+            \item \underline{Lorsque $a_n$ est éventuellement négative} 
+                \vspace{1em} \\
+                Si $\{ a_n \}$ est une suite 
+                \textbf{éventuellement négative}, 
+                alors,  
+                \begin{align*}
+                    \lim\limits_{n\to+\infty}\frac{1}{a_n}  = 0 
+                    \implies 
+                    \lim\limits_{n\to+\infty}a_n  = -\infty
+                \end{align*}
+        \end{enumerate} 
+    \end{Lemme}
+
+
+    \begin{Preuve}{}{}
+    Soit $a_n$ une suite telle que  
+    $\lim\limits_{n\to+\infty}\frac{1}{a_n}  = 0$ et $a_n$ est 
+    éventuellement positive. Nous voulons montrer que 
+    \[ \lim\limits_{n\to+\infty}a_n  = \infty  \]
+    \vspace{1em}\\
+    Supposons que $\lim_{n \to +\infty} \frac{1}{a_n} = 0$. 
+    Par la définition de convergence d'une suite, cela signifie que 
+    pour tout $\epsilon > 0$, 
+    il existe un entier $M$ tel que pour tout 
+    $n \geq M$, $\left|\frac{1}{a_n}\right| < \epsilon$. 
+    \vspace{1em}\\
+    Puisque $\{ a_n \}$ est éventuellement positive, il existe un 
+    entier $N$ tel que pour tout $n \geq N$, $a_n \geq 0$. Soit 
+    $K = \max\{M, N\}$. Alors, pour tout $n \geq K$, 
+    nous avons et 
+    \[ a_n \geq 0 \textbf{ et } \left|\frac{1}{a_n}\right| < \epsilon \] 
+
+    Le fait que $\left|\frac{1}{a_n}\right| < \epsilon$ pour $\epsilon > 0$
+    et $a_n \geq 0$ implique que $\frac{1}{a_n} > \frac{1}{\epsilon}$ 
+    pour $n \geq K$. Ainsi, $a_n < \epsilon$ pour $n \geq K$
+    Puisque $\epsilon$ est arbitraire, 
+    cela signifie que pour tout $\epsilon > 0$, il existe un rang $K$ 
+    tel que pour tout $n \geq K$, $a_n < \epsilon$. 
+    Ceci est précisément la définition de $\lim_{n \to +\infty} a_n = 0$.
+    \vspace{1em}\\
+    Par conséquent, si $\lim_{n \to +\infty} \frac{1}{a_n} = 0$ et 
+    $\{ a_n \}$ est éventuellement positive, alors 
+    $\lim_{n \to +\infty} a_n = 0$. \qed
+    \end{Preuve}
+
+    \begin{note}{}{}
+        Nous pouvons utiliser le même raisonnement pour montrer que 
+        \textbf{si} $a_n$ est éventuellemet négative et que 
+        $\lim\limits_{n\to+\infty}\frac{1}{a_n}  = 0$, \textbf{alors}  
+        \begin{align*}
+            \lim\limits_{n\to+\infty}a_n  = -\infty 
+        \end{align*}
+    \end{note}
+
+
+    \begin{Concept}{Propriétés des limites}{}
+        Si $\{a_n\}$ et $\{b_n\}$ sont des suites convergentes et 
+        si $c$ est une constante, alors \\\\ 
+        $\lim\limits_{n\to\infty  }\left(a_n \text{+} b_n \right) = 
+        \lim\limits_{n\to\infty  }a_n \text{+} 
+        \lim\limits_{n\to\infty  }b_n$
+        \\\\
+        $\lim\limits_{n\to\infty  }\left(a_n - b_n \right) = 
+        \lim\limits_{n\to\infty  }a_n - \lim\limits_{n\to\infty  }b_n$ 
+        \\\\
+        $\lim\limits_{n\to\infty  }ca_n = c \lim\limits_{n \to \infty  }a_n$ 
+        \\\\
+        $\lim\limits_{n\to\infty  }\left(a_nb_n \right) = 
+        \lim\limits_{n\to\infty  }a_n \cdot \lim\limits_{n\to\infty  }b_n$
+        \\\\
+        $\lim\limits_{n\to\infty  }\left(\frac{a_n}{b_n} \right) = 
+        \frac{\lim\limits_{n\to\infty  }a_n}{\lim\limits_{n\to\infty  }b_n}
+        \;
+        \text{si} \lim\limits_{x\to\infty  }b_n \neq 0$
+        \\\\
+        $\lim\limits_{n\to\infty  }a_n^{p} = 
+        \left[\lim\limits_{n\to\infty  }a_n \right]^p \text{si } 
+        p > 0 \; \text{et} \; a_n > 0$
+    \end{Concept}
+
+
+    \begin{Concept}{Limite d'une suite polynomiale}{}
+        \noindent Soit deux polynomes,
+        \[ \lim\limits_{n\to \infty } \dfrac{p(n)}{q(n)}\] 
+        On considère 
+        \[ k = \min\bigl(deg(p), deg(q)\bigr) \]
+        On effectue ensuite le quotient: 
+        \[ \lim\limits_{n\to+\infty}\dfrac{p(n)/{n^k}}{q(n)/n^{k}} \]
+        Autrement dit, on effectue la division du numérateur et du 
+        dénominateur par le terme du polynôme ayant le plus petit degré. 
+    \end{Concept}
+
+    \begin{note}{}{}
+        Il est aussi possible d'utilsier la \textbf{règle de l'Hôpital}. 
+        La simplification du polynôme pourrait être plus rapide, selon 
+        les circonstances. 
+    \end{note}
+
+    \section{Monotonicité \quad \texttt{\S Stewart 1.1}  }
+    Soit une suite $\{a_n \}$, on dit que la suite est :
+    \begin{itemize}
+        \item \textbf{Strictement croissant} si $\forall n \geq 1, 
+            a_{n+1} > a_n$
+        \item \textbf{Croissante} si $\forall n \geq 1, 
+            a_{n+1} \geq a_n$ 
+        \item \textbf{Strictement décroissante} si $\forall n \geq 1, 
+            a_{n+1} < a_n$ 
+        \item \textbf{Décroissante} si $\forall n \geq 1, 
+            a_{n+1} < a_n$ 
+        \item \textbf{Stationnaire} ou \textbf{constante} si 
+            $\forall n \geq 1, 
+            a_{n+1} < a_n$ 
+        \item \textbf{Monotone}  
+    \end{itemize}
+
+    \columnbreak
+    \section{Bornes d'une suite}
+    \begin{Definitionx}{Minorant et majorant}{}
+      Une suite de terme général $a_n$ est \emph{minorée} par le 
+      nombre réel $m$ \textbf{si et seulement si}, pour tout $n$ on a :
+      $a_n \geq m$
+       \begin{align*}
+           \textbf{Minonant } m \Coloneqq 
+           \exists m \in \mathbb{R} : \forall n \in \{ a_n \}, 
+           a_n \geq m
+       \end{align*}
+       Une suite de terme général $a_n$ est \emph{majorée} par le nombre 
+       réel $M$ si, et seulement si, pour tout $n$ on a :
+       $a_n \leq M$
+       \begin{align*}
+           \textbf{Majorant} M \Coloneqq 
+           \exists M \in \mathbb{R} : \forall n \in \{ a_n \}, 
+           a_n \leq M
+       \end{align*}
+       Une suite est bornée si elle est à la fois majorée et minorée. 
+    \end{Definitionx}
+
+    \begin{Theorem}{Théorème des suites monotones}{}
+        Toute suite monotone et bornée est \textbf{convergente}  
+    \end{Theorem}
+
+
+    \begin{Lemme}{}{}
+        \begin{itemize}
+            \item Toute suite éventuellement croissante et majorée 
+        est également \textbf{convergente}  
+            \item Tout suite éventuellement décroissante et 
+            minorée est également \textbf{convergente}  
+        \end{itemize}
+    
+    \end{Lemme}
+    
+
+
+
+\end{multicols*}
+\end{document}
