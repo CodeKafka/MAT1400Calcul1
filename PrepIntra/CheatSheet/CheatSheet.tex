@@ -1,0 +1,450 @@
+\documentclass[2pt]{report}
+\input{preamble.tex}
+\usepackage[scr]{rsfso}
+
+
+\title{\Huge{Calcul 1}\\{MATH1400}\\{\textbf{Introduction}}}
+\author{\huge{Franz Girardin}}
+\date{\today}
+\lstset{inputencoding=utf8/latin1}
+
+            %%%%%%%%%%%%%%%%%  Sect.                          %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{helvet}
+\titleformat{\chapter}
+  {\fontfamily{phv}\bfseries\huge} % format
+  {}                % label
+  {0pt}             % sep
+  {\color{myb}\huge}           % before-code
+
+
+
+\titleformat{\section}
+  {\normalfont\scshape}{\thesection}{1em}{}
+
+
+% Customizing the spacing for the chapter titles
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+
+\usepackage[utopia]{mathdesign}
+% Allow hfill in math environment
+\newcommand{\specialcell}[1]{\ifmeasuring@#1\else\omit$\displaystyle#1$\ignorespaces\fi}
+
+% Allow you to do the non implication (implication barred)
+\newcommand{\notimplies}{%
+  \mathrel{{\ooalign{\hidewidth$\not\phantom{=}$\hidewidth\cr$\implies$}}}}
+
+
+
+\DeclareRobustCommand{\looongrightarrow}{%
+  \DOTSB\relbar\joinrel\relbar\joinrel\relbar\joinrel\rightarrow
+}
+
+\begin{document}
+\maketitle
+
+\pagebreak
+
+\pagebreak
+\begin{multicols*}{3}
+
+
+    \footnotesize
+
+    \paragraph{Définition d'une suite}
+        \textbf{Fonction} $\mathbb{N}^* 
+        \rightarrow \mathbb{R}$ qui accepte 
+        $n \in \mathbb{N}^*$ et engendre une \textbf{séquence ordonnées} de $a_n \in \mathbb{R}$. 
+
+
+    \paragraph{Définition d'une suite arithmétique}    
+        \begin{align*}
+                &a_n \Coloneqq 
+                \begin{cases}
+                    a_1 = r  &\omit\quad\quad\quad Raison\\  
+                    a_{n} = a_{n-1} + r &\omit\hfill \quad\quad\quad Récurrence
+                \end{cases}
+                \\\\
+                &r = a_n - a_{n-1} \;\;| n \geq 2  
+                \quad\quad\quad\quad\;\;\text{Trouver $r$} \\
+                &a_n = a_1 \text{+} \left(n - 1\right)\cdot{n}  \;\;|n \geq 1  
+                \quad\quad\text{Trouver $n$\up{e} terme}
+        \end{align*}
+    \paragraph{Définition d'une suite géométrique}
+        \begin{align*}
+                &a_n \Coloneqq 
+                \begin{cases}
+                    a_1 = r  &\omit\quad\quad Raison\\  
+                    a_{n} = a_{n-1} \cdot r &\omit\hfill 
+                    \quad\quad Récurrence
+                \end{cases}
+                \\\\ 
+                &r = \frac{a_n}{a_{n-1}} \; | \; n \geq 2
+                \quad\quad\quad\quad\;\;\text{Trouver $r$} \\ 
+                &a_n = a_1r^{n - 1} \; | \; n \geq 1
+                \text{\quad\quad\quad\; Trouver $n$\up{e} terme}
+        \end{align*}
+
+
+
+
+
+
+        \paragraph{Convergence d'une suite géométrique}
+        $\forall r \in \mathbb{R}$, la suite $\{r^n\}$ converge        
+        \textit{ssi} $-1 < r \leq 1$ : 
+        \begin{align*}
+            \lim\limits_{n\to+\infty }\{r^n\} = 
+                    \begin{cases}
+                        0 \quad \text{si $-1 < r < 1$} \\
+                        1 \quad \text{si $r = 1$}
+                    \end{cases}
+        \end{align*}
+
+
+        
+
+    \paragraph{Définition formelle de convergence d'une suite}
+      \begin{align*}
+        \lim\limits_{n \to\infty  }{a_n} = L \\
+      \end{align*}
+      \textbf{si et seulement si}, 
+      \begin{align*}
+        \forall\varepsilon > 0, \exists N\left( \varepsilon \right) > 0 : 
+        n > N\left( \varepsilon \right) \implies 
+        |a_n -L| < \varepsilon
+      \end{align*}
+
+
+
+    \paragraph{Définition formelle de divergence d'une suite}
+      \begin{align*}
+        \lim\limits_{n  \to\infty  }{a_n} = \infty
+      \end{align*}
+      \textbf{si et seulement si},  
+        \begin{align*}
+            \forall M \in \mathbb{R}, \exists N \in \mathbb{N}^{*} :
+            n > N \implies |a_n| > M 
+        \end{align*}
+
+    \paragraph{Corollaire}
+    \textbf{Si} $\lim\limits_{n\to+\infty }a_n  = \infty$, 
+    \textbf{alors}, 
+    $\lim\limits_{n\to+\infty }{\dfrac{1}{a_n}}  = 0$
+
+
+
+
+    \paragraph{Attention}
+        \begin{align*}
+            \lim\limits_{n\to\infty  }\frac{1}{a_n} = 0 
+            \textcolor{red}{\notimplies}
+            \lim\limits_{n\to+\infty }a_n  = \infty
+        \end{align*}    
+
+    \paragraph{Lemme de convergence des suite éventuellement signées}
+
+
+
+        \begin{enumerate}
+            \item 
+                Si $\{ a_n \}$ est une suite 
+                \textbf{éventuellement positive}, 
+                alors,  
+                    $\lim\limits_{n\to+\infty }\frac{1}{a_n}  = 0 
+                    \implies 
+                    \lim\limits_{n\to+\infty }a_n  = \infty$
+            \item                                 
+                Si $\{ a_n \}$ est une suite 
+                \textbf{éventuellement négative}, 
+                alors,   
+                    $\lim\limits_{n\to+\infty }\frac{1}{a_n}  = 0 
+                    \implies 
+                    \lim\limits_{n\to+\infty }a_n  = -\infty$
+        \end{enumerate} 
+
+
+ 
+
+    \paragraph{Propriétés des limites}
+        Si $\{a_n\}$ et $\{b_n\}$ sont des suites convergentes et 
+        si $c$ est une constante, \textbf{alors} \\\\ 
+        $\lim\limits_{n\to\infty  }\left(a_n \text{+} b_n \right) = 
+        \lim\limits_{n\to\infty  }a_n \text{+} 
+        \lim\limits_{n\to\infty  }b_n$
+        \\\\
+        $\lim\limits_{n\to\infty  }\left(a_n - b_n \right) = 
+        \lim\limits_{n\to\infty  }a_n - \lim\limits_{n\to\infty  }b_n$ 
+        \\\\
+        $\lim\limits_{n\to\infty  }ca_n = c \lim\limits_{n \to \infty  }a_n$ 
+        \\\\
+        $\lim\limits_{n\to\infty  }\left(a_nb_n \right) = 
+        \lim\limits_{n\to\infty  }a_n \cdot \lim\limits_{n\to\infty  }b_n$
+        \\\\
+        $\lim\limits_{n\to\infty  }\left(\frac{a_n}{b_n} \right) = 
+        \frac{\lim\limits_{n\to\infty  }a_n}{\lim\limits_{n\to\infty  }b_n}
+        \;
+        \text{si} \lim\limits_{x\to\infty  }b_n \neq 0$
+        \\\\
+        $\lim\limits_{n\to\infty  }a_n^{p} = 
+        \left[\lim\limits_{n\to\infty  }a_n \right]^p \text{si } 
+        p > 0 \; \text{et} \; a_n > 0$
+
+
+
+    \paragraph{Limite d'une suite polynomiale} 
+        Soit deux polynomes,
+        $\lim\limits_{n\to \infty } \dfrac{p(n)}{q(n)}$, 
+        et 
+        $k = \min\bigl(deg(p), deg(q)\bigr)$
+        \textbf{Alors},   
+        \[ \lim\limits_{n\to \infty } \dfrac{p(n)}{q(n)} =
+        \lim\limits_{n\to+\infty}\dfrac{p(n)/{n^k}}{q(n)/n^{k}} \]
+
+
+
+    \paragraph{Règle de l'Hôpital}
+        Soit une \textbf{constante} $c \in \mathbb{R} \cup \{+\infty\}$ et supposon que : 
+        \begin{itemize}
+        \item $\lim\limits_{x\to c}\dfrac{|f(x)|}{|g(x)|}$ 
+            est de la forme $\dfrac{0}{0}$ ou 
+            $\dfrac{\infty }{\infty }$
+        \item $\lim\limits_{x\to c}\dfrac{f^{\prime}(x)}{|g^{\prime}(x)|}$
+            \textbf{existe} et 
+            \textcolor{red}{$g^{\prime}(x) \neq 0 \;\; \forall x \approx c$ }
+        \end{itemize}
+        \textbf{Alors}, 
+        \begin{align*}
+            \lim\limits_{x\to c}\dfrac{f(x)}{g(x)} = 
+            \lim\limits_{x\to c}\dfrac{f^{\prime}(x)}{g^{\prime}(x)}
+        \end{align*}
+        
+
+
+    \paragraph{Monotonicité} 
+        Soit une suite $\{a_n \}$, on dit que la suite est :
+        \begin{itemize}
+            \item \textbf{Strictement croissant} si $\forall n \geq 1, 
+                a_{n+1} > a_n$
+            \item \textbf{Croissante} si $\forall n \geq 1, 
+                a_{n+1} \geq a_n$ 
+            \item \textbf{Strictement décroissante} si $\forall n \geq 1, 
+                a_{n+1} < a_n$ 
+            \item \textbf{Décroissante} si $\forall n \geq 1, 
+                a_{n+1} < a_n$ 
+            \item \textbf{Stationnaire} ou \textbf{constante} si 
+                $\forall n \geq 1, 
+                a_{n+1} < a_n$ 
+            \item \textbf{Monotone}  
+        \end{itemize} 
+
+
+
+    \paragraph{Définitions de bornes d'une suite}
+       \begin{align*}
+           \textbf{Minonant } m \Coloneqq 
+           \exists m \in \mathbb{R} : \forall n \in \{ a_n \}, 
+           a_n \geq m
+       \end{align*}
+       \begin{align*}
+           \textbf{Majorant} M \Coloneqq 
+           \exists M \in \mathbb{R} : \forall n \in \{ a_n \}, 
+           a_n \leq M
+       \end{align*}
+       \begin{align*}
+           \textbf{Bornée} \Coloneqq 
+            \textit{Majorée} \land \textit{minorée}
+       \end{align*}
+       
+
+
+    \paragraph{Théorème des suites monotones}
+        Toute suite monotone et bornée est \textbf{convergente}  
+
+
+    \paragraph{Lemmes des suites monotones}
+        \begin{itemize}
+            \item Toute suite éventuellement croissante et majorée 
+        est également \textbf{convergente}  
+            \item Tout suite éventuellement décroissante et 
+            minorée est également \textbf{convergente}  
+        \end{itemize}
+    
+
+
+    \paragraph{Association d'une fonction à une suite}
+        Soit $f\left(x\right)$ une fonction admettant une limite $L$ à 
+        $\text{+}\infty$, Alors, la suite 
+        $\{a_n\} = f\left(n\right)$ admet la même limite : 
+        \begin{align*}
+          \lim\limits_{x\to\infty  }f(x) = L \implies \lim\limits_{n\to\infty  }a_n = L
+        \end{align*}
+        De la même façon :
+        \begin{align*}
+          \lim\limits_{x\to\infty  }f(x) = \infty \implies \lim\limits_{n\to\infty  }a_n = \infty
+        \end{align*}
+        Par ailleurs, si $f\left(x\right)$ est une fonction continue en 
+        $L$ et si la suite $\{a_n\}$
+        converge vers $L$, alors la limite suivante converge vers $f\left(L\right)$ :
+        \begin{align*}
+                    \lim\limits_{n\to+\infty  }f(a_n)  = f(L) 
+        \end{align*}
+
+
+
+    \paragraph{Comparaison des suites}
+        Si $a > 1$ et $k > 0$, on a 
+        \begin{align*}
+            \ln(n) \ll n^K \ll a^n \ll n! \ll n^n
+        \end{align*}
+        $c_n \ll d_n \implies 
+        \lim\limits_{n\to+\infty }\dfrac{c_n}{d_n} = 0$ 
+
+
+    \paragraph{Théorème des gendarmes}{}
+        Soient $\{a_n\}$, $\{b_n\}$ et $\{c_n\}$ des suites et $n_0 \in \mathbb{N}$ tels 
+        que
+        \begin{itemize}
+            \item $\lim\limits_{n\to+\infty }a_n  = 
+                \lim\limits_{n\to+\infty }c_n  = L 
+                \in \mathbb{R} \cup \{\infty \}$; 
+            \item $\forall n \geq n_0, \; a_n \leq b_n \leq c_n$ 
+        \end{itemize}
+        \textbf{Alors},
+        \begin{align*}
+            \lim\limits_{n\to+\infty}b_n  = L                   
+        \end{align*}
+
+
+
+    \paragraph{Corollaire}
+         \textbf{Si} $\lim\limits_{n\to+\infty }|a_n|  = 0$, 
+         \textbf{alors}      
+         $\lim\limits_{n\to+\infty }a_n  = 0$
+
+    \paragraph{Définition d'une série numérique}
+    Somme infinie des termes d'une suite numérique 
+    correspondante $a_n$ : 
+    $\sum_{n=1}^{\infty}a_n$. 
+    \begin{itemize}
+        \item \textbf{Premiers termes} $s_n = \sum_{i=1}^{n } a_i$   
+        \item \textbf{Convergence}   
+        $\lim\limits_{n\to+\infty }s_n  = s \implies 
+        \sum_{n}^{\infty}a_n \textbf{ conv.}$
+    \end{itemize}
+
+
+
+    \paragraph{Critère de divergence}
+        Si la série converge, la suite correspondante 
+        \textbf{converge vers 0},
+        et si la suite ne converge pas vers zéro, la série 
+            est divergente
+        \begin{itemize} 
+            \item $\sum_ {n}^{ \infty }a_n = s \; (\textbf{conv.}) 
+                \implies 
+            \lim\limits_{n\to+\infty }a_n  = 0$
+            \item
+            $\lim\limits_{n\to+\infty }a_n  \neq 0  
+            \implies 
+            \sum_{ n}^{\infty }a_n$ \textbf{ div.}  
+        \end{itemize}
+
+    \paragraph{Attention} 
+    $\lim\limits_{n\to+\infty }a_n = 0 
+    \textcolor{red}{\notimplies} 
+    \sum_{n=1}^{\infty }a_n$ \textbf{conv}.   
+
+
+
+    \paragraph{Convergence d'une série géométrique}
+    \begin{itemize}
+        \item[$\rhd$] 
+            $|r| < 1 \implies  
+            \sum_{n=0}^{\infty }ar^{n} = 
+            \dfrac{a}{1 - r} $ \;\;(\textbf{conv.})  
+        \item [$\rhd$] 
+            $(|r| \geq 1) \land (a \neq 0) \implies 
+            \sum_{n=0}^{\infty }ar^{n} = \infty$ 
+            (\textbf{div.})
+        
+    \end{itemize}
+
+
+
+    \paragraph{Propriétés des séries}
+    \begin{itemize}
+        \item[$\blacktriangleright$]  \textbf{+} et \textbf{-} de deux séries convergentes 
+            ainsi que $c \cdot \sum_{n}^{\infty }a_n$ engendrent une série \textbf{conv}.
+        \item[$\blacktriangleright$] 
+            $\sum_{n=1}^{\infty}a_nb_n \textcolor{red}{\neq} 
+            (\sum_{n=1}^{\infty}a_n)(\sum_{n=1}^{\infty}b_n)$
+        \item[$\blacktriangleright$]
+            $\sum_{n=1}^{\infty }\dfrac{a_n}{b_n} 
+            \textcolor{red}{\neq} 
+            \dfrac{\sum_{n=1}^{\infty}a_n}{\sum_{n=1}^{\infty}b_n}$
+    \end{itemize}
+    
+    
+    \paragraph{Test de l'intégrale}
+    Soit $f : [1, \infty [ \rightarrow \mathbb{R}$ 
+    \textbf{continue}, \textbf{positive} et \textbf{croissante} 
+    et $a_n : f(n) = a_n$,
+    \begin{align*}
+        \sum_{n=1}^{\infty }a_n \;\; \textbf{conv.} \;\; \leftrightarrow
+        \lim\limits_{x\to+\infty}\int_{x=1}^{\infty}f(x)dx = s \;\; (\textbf{conv.})    
+    \end{align*}
+
+
+    
+    \paragraph{Estimation du reste par TI}
+    \textbf{Si} $f: \lambda, + , \downarrow [m, \infty [$ et soit $m \in \mathbb{N}^*, 
+     a_n = f(n), \sum_{n=1}^{\infty}a_n = s \in \mathbb{R}, 
+     R_m = s - s_m$, \textbf{alors} le reste $R_m$ est borné et peut être 
+     estimé :
+     \begin{align*}
+        \int_{m+1}^{\infty }f(x)dx \leq \left(R_m = \sum_{k=1}^{m} a_k\right) 
+        \leq \int_{m}^{\infty }f(x)dx
+     \end{align*}
+
+
+    
+     \paragraph{Test de comparaison}
+     Soient $\sum a_n, \sum b_n$ des séries à \textbf{termes positifs} 
+     et $n_0 \in \mathbb{R}$ :
+     \begin{itemize}
+         \item[$\rhd$ ] $\left(\sum   b_n  \;\; \textbf{conv.}\right) \land 
+             (a_n \leq b_n \forall n \geq n_0) 
+             \implies a_n \; \textbf{conv.}$ 
+         \item[$\rhd$ ] $\left(\sum   b_n  \;\; \textbf{div.}\right) \land 
+             (a_n \geq b_n \forall n \geq n_0) 
+             \implies a_n \;\; \textbf{div.}$ 
+         \item[$\rhd$ ] $\lim\limits_{n\to\infty}\dfrac{a_n}{b_n}
+             \in \mathbb{R} \textbf{ existe } \textbf{ et } L > 0 
+             \implies 
+        \sum a_n \;\; \textbf{conv.} \;\; \leftrightarrow \;\; 
+        \sum b_n \;\; \textbf{conv.}$ 
+    \item[$\blacktriangleright$] Principalement pour Riemann \& géométriques
+     \end{itemize}
+
+     
+
+     \paragraph{Test sur séries alternée}
+     Soit un \textbf{rang} $n_0 \in \mathbb{N}$ et 
+     soit une \textbf{série alternée} 
+     $\sum_{n=1}^{\infty } (-1)^nb_n$ telle que 
+     \begin{itemize}
+        \item[$\rhd$]  $0 \leq b_{n+1} \leq b_n \;\;(\downarrow \textbf{ et } +)$ 
+        \item[$\rhd$] $\lim\limits_{n\to\infty }b_n = 0$ 
+     \end{itemize}
+     \textbf{Alors}, 
+     \begin{itemize}
+         \item[$\blacktriangleright$]
+     $\sum  (-1)^nb_n \textbf{ conv. }$ vers $s \in
+     \mathbb{R} \;\; \forall 
+     m \geq n_0 $ \textbf{et}  
+        \item[$\blacktriangleright$] 
+    $|s - s_m| \leq b_{m+1}$
+     \end{itemize}
+
+ \end{multicols*}
+\end{document}

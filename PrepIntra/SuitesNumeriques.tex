@@ -150,6 +150,17 @@
     \end{Concept}
 
     \begin{Theorem}{Convergence d'une suite géométrique}{}
+        Soit $r \in \mathbb{R}$. La suite géométrique $\{r^n\}$ de raison $r$ converge si 
+        et seulement si $-1 < r \leq 1$. Selon le cas, la suite 
+        \textbf{converge alors vers 0 ou 1} :  
+        \begin{align*}
+                    \lim\limits_{n\to+\infty}r^n = 
+                    \begin{cases}
+                        0 \quad \text{si $-1 < r < 1$} \\
+                        1 \quad \text{si $r = 1$}
+                    \end{cases}
+        \end{align*}
+
         
     \end{Theorem}
 
@@ -253,7 +264,6 @@
     \end{note}
 
 
-    \columnbreak
     \begin{Lemme}{}{}
 
         \begin{enumerate}
@@ -383,7 +393,6 @@
         \item \textbf{Monotone}  
     \end{itemize}
 
-    \columnbreak
     \section{Bornes d'une suite}
     \begin{Definitionx}{Minorant et majorant}{}
       Une suite de terme général $a_n$ est \emph{minorée} par le 
@@ -420,32 +429,240 @@
     
     \end{Lemme}
 
+    \section{Correspondance entre une limite et une suite \texttt{\S Stewart 1.1}}
+    \begin{Theorem}{Association d'une fonction à une suite}{}
+        Soit $f\left(x\right)$ une fonction admettant une limite $L$ à 
+        $\text{+}\infty$, Alors, la suite 
+        $\{a_n\} = f\left(n\right)$ admet la même limite : 
+        \begin{align*}
+          \lim\limits_{x\to\infty}f(x) = L \implies \lim\limits_{n\to\infty}a_n = L
+        \end{align*}
+        De la même façon :
+        \begin{align*}
+          \lim\limits_{x\to\infty}f(x) = \infty \implies \lim\limits_{n\to\infty}a_n = \infty
+        \end{align*}
+        Par ailleurs, si $f\left(x\right)$ est une fonction continue en 
+        $L$ et si la suite $\{a_n\}$
+        converge vers $L$, alors la limite suivante converge vers $f\left(L\right)$ :
+        \begin{align*}
+                    \lim\limits_{n\to+\infty}f(a_n)  = f(L) 
+        \end{align*}
+    \end{Theorem}
+
+
+    \section{Comparaison de suites \texttt{\S Stewart 1.1}}
+    \begin{Theorem}{}{}
+        Si $a > 1$ et $k > 0$, on a 
+        \begin{align*}
+            \ln(n) \ll n^k \ll a^n \ll n! \ll n^n
+        \end{align*}
+    \end{Theorem}
+
+    \begin{note}{}{}
+        La notation $c_n \ll d_n$ signifie que $c_n$ converge vers une 
+        \textbf{valeur largement inférieure}
+        à celle à laquelle $d_n$ converge. Autrement dit, 
+        \begin{align*}
+                \lim\limits_{n\to+\infty }\dfrac{c_n}{d_n} = 0
+        \end{align*}
+    \end{note}
+
+
+    \section{Théorèmes essentiels \texttt{\S Stewart 1.1}}
+
+    \begin{Theorem}{Règle de l'Hôpital}{}
+        Soit une \textbf{constante} $c \in \mathbb{R} \cup \{+\infty\}$ et supposon que : 
+        \begin{itemize}
+        \item $\lim\limits_{x\to c}\dfrac{|f(x)|}{|g(x)|}$ 
+            est de la forme $\dfrac{0}{0}$ ou 
+            $\dfrac{\infty }{\infty }$
+        \item $\lim\limits_{x\to c}\dfrac{f^{\prime}(x)}{|g^{\prime}(x)|}$
+            \textbf{existe} et 
+            \textcolor{red}{$g^{\prime}(x) \neq 0 \;\; \forall x \approx c$ }
+        \end{itemize}
+        \textbf{Alors}, 
+        \begin{align*}
+            \lim\limits_{x\to c}\dfrac{f(x)}{g(x)} = 
+            \lim\limits_{x\to c}\dfrac{f^{\prime}(x)}{g^{\prime}(x)}
+        \end{align*}
+        
+    \end{Theorem}
+
+
+    \begin{Theorem}{Théorème des gendarmes}{}
+        Soient $\{a_n\}$, $\{b_n\}$ et $\{c_n\}$ des suites et $n_0 \in \mathbb{N}$ tels 
+        que
+        \begin{itemize}
+            \item $\lim\limits_{n\to+\infty}a_n  = 
+                \lim\limits_{n\to+\infty}c_n  = L 
+                \in \mathbb{R} \cup \{\infty \}$; 
+            \item $\forall n \geq n_0, \; a_n \leq b_n \leq c_n$ 
+        \end{itemize}
+        \textbf{Alors},
+        \begin{align*}
+            \lim\limits_{n\to+\infty}b_n  = L                   
+        \end{align*}
+    \end{Theorem}
+
+    \begin{corollary*}
+         \textbf{Si} $\lim\limits_{n\to+\infty}|a_n|  = 0$, 
+         \textbf{alors}      
+         $\lim\limits_{n\to+\infty}a_n  = 0$
+    \end{corollary*}
+    \columnbreak
+
+    \chapter{Les séries numériques}
+
+    \section{Les séries infinies \texttt{\S Stewart 1.2}}
+
+    \begin{Definitionx}{Série numérique}{}
+        Soit une suite $\{a_n\}_{n\geq 1}$, la 
+        \textbf{série numérique} et la 
+        n\up{e} \textbf{somme partielle} de la suite sont donnés, 
+        respectivement, par : 
+        \begin{align*}
+            \sum_{n=1}^{\infty }a_n \quad s_n = 
+            \sum_{i=1}^{n} a_i = 
+            a_1 + a_2 + \cdots + a_n 
+        \end{align*}
+        Si la limite des sommes partielles semble s'approcher 
+        autant que l'on veut 
+        d'un nombre $L$ lorsque le nombre de termes additionnés 
+        pour une somme partielle augmente, 
+        autrement dit, 
+        $s_n \stackrel{n \to \infty}{\looongrightarrow} L$, 
+        \textbf{alors} on dit que 
+        la série \textbf{congerge} vers $L$.   
+        \begin{align*}
+            \lim\limits_{n\to+\infty}s_n  = L 
+            \implies \sum_{n}^{\infty}a_n \textbf{ converge}  
+        \end{align*}
+    \end{Definitionx}
+
+    \section{Tests et critères \texttt{\S Stewart 1.2}}
+    \begin{Theorem}{Critère de convergence}{}
+        \textbf{Si} la série $\sum_{n}^{\infty}a_n$ converge, \textbf{alors}, 
+        $\lim\limits_{n\to+\infty}a_n  = 0$.  
+    \end{Theorem}
+
+    \begin{Preuve}{}{}
+        Soit une série converge $\sum_{n=1}^{\infty}a_n$. 
+        Par la définition d'une série 
+        convergente, nous savons que la somme partielle 
+        $s_n$ converge vers $s$. Nous savons
+        également que la somme $s_{n-1}$ converge aussi vers $s$, 
+        puisque lorsque $n$ tend vers 
+        l'infini, la contribution de la constante $-1$ à la somme $s_{n-1}$ 
+        est négligeable.
+        Ainsi, nous avons :
+        \begin{align*}
+                \lim\limits_{\to+\infty }s_n  = s \textbf{ et }
+                \lim\limits_{\to+\infty }s_{n-1}  = s
+        \end{align*}
+        \textbf{Or}, nous savons que 
+        \begin{align*}
+        & s_n - s_{n-1} = \\ 
+        & (a_1, a_2, \cdots , a_{n-2}, a_{n-1}, a_n) - \\
+        & (a_1, a_2, \cdots, a_{n-2}, a_{n-1}) = a_n
+        \end{align*}
+    On peut alors calculer la limite de $a_n$ comme suit : 
     \begin{align*}
-        \lim\limits_{n\to 0^{+} }x\ln(x)
-    \end{align*}
-    Utiilisation de la règle de l'H. 
-    \begin{align*}
-                        \lim\limits_{n\to 0^{+} }x\ln(x)
-                        &=         \lim\limits_{n\to 0^{+} }\frac{\ln(x)}
-                        {1/x} \\ 
-                        &= \dots \text{derivation haut et bas} \\
-                        &=         \lim\limits_{n\to 0^{+} }\frac{1/x}{-1/x^2} \\
-                        &= \lim\limits_{n\to+\0^+}-x  = 0 
-    \end{align*}
+        \lim\limits_{n\to+\infty}a_n & = \lim\limits_{n\to+\infty}(s_n - s_{n-1})  \\   
+                             & = \lim\limits_{n\to+\infty}s_n 
+                             - \lim\limits_{n\to+\infty}s_{n-1} \\ 
+                             & = s - s = 0
+    \end{align*}                
+    Nous venons de montrer que lorsque la série 
+    $\sum_{n=1}^{\infty}a_n$ converge, la suite correspondante, $a_n$ 
+    converge vers 0. \qed
+    \end{Preuve}
+
+    \begin{Theorem}{Convergence d'une série géométrique}{}
+        \textbf{Si} $|r| < 1$, la série géométrique 
+        $\sum_{n=0}^{\infty}ar^{n} = a + ar + ar^2 + \dots + ar^n$ 
+        converge vers $ \frac{a}{1 - r}$. Si 
+        $|r| \geq 1$ et $a \neq 0$, la série \textbf{diverge}.   
+    \end{Theorem}
+
+    \begin{Theorem}{Test de l'intégrale}{}
+        Soit une fonctions \textbf{continue}, \textbf{positive} et 
+        \textbf{décroissante} 
+        ($f: [1, \infty[ \rightarrow \mathbb{R}, \lambda , + , \downarrow$), s'il existe 
+        une suite numérique correspondante telle que $a_n = f(n)$, \textbf{alors} 
+        la suite converge ou diverge avec l'intégrale : 
+        \begin{align*}
+                \sum_{n=1}^{\infty }a_n \;\; \textbf{conv.} 
+                \leftrightarrow 
+                \int_{x=1}^{\infty}f(x)dx \;\; \textbf{conv.}  
+        \end{align*}
+    \end{Theorem}
 
 
-    \begin{Exercice}{}{}
-       Résoudre
-       \begin{align*}
-           \lim\limits_{n\to\infty}5^{0.5}=
-       \end{align*}
-    \end{Exercice}
+    \begin{Theorem}{Estimation du reste}{}
+        Soit un certain \textbf{rang} $m$ et une suite numérique 
+        $\sum_{n=1}^{\infty}a_n$, il est possible d'estimer la 
+        \textbf{différence} 
+        $R_m$ entre la somme partielle $s_m$ et la somme totale 
+        $s$ de la série. 
+        \vspace{1em}\\ 
+        Considérons $m \in \mathbb{N}^*$, 
+        une suite, $a_n$, et une fonction 
+        \textbf{continue}, \textbf{décroissante} 
+        et \textbf{positive} sur $[m, \infty [$ 
+        telle que $f(n) = a_n$. Supposons que la 
+        série $a_n$ converge à $s$ 
+        ($\sum_{n=1}^{\infty}a_n = s \in \mathbb{R}$) 
+        et que la somme partielle jusqu'au rang $m$ est donnée  
+        par $s_m$ ($\sum_{k=1}^{m} a_k) = s_m$. \textbf{Alors}, 
+        le reste $R_m$ est donné par $R_m = s - s_m$ et 
+        ce reste est borné par deux intégrales : 
+        \begin{align*}
+            \int_{m+1}^{\infty}f(x)dx \leq \left(R_m = \sum_{k=1}^{m} a_k\right) 
+            \leq \int_{m}^{\infty}f(x)dx
+        \end{align*}
+    \end{Theorem}
 
 
-    
-    
+    \begin{Theorem}{Test de comparaison}{}
+        Les tests de comparaisons permettent de comparer une série 
+        \textbf{qu'on sait convergente} à une autre série à investiguer 
+        ou une série \textbf{qu'on sait divergente} à une autre série.   
+        \vspace{1em}\\ 
+     \begin{itemize}
+         \item[$\rhd$ ] $\left(\sum   b_n  \;\; \textbf{conv.}\right) \land 
+             (a_n \leq b_n \forall n \geq n_0) 
+             \implies a_n \; \textbf{conv.}$ 
+         \item[$\rhd$ ] $\left(\sum   b_n  \;\; \textbf{div.}\right) \land 
+             (a_n \geq b_n \forall n \geq n_0) 
+             \implies a_n \;\; \textbf{div.}$ 
+         \item[$\rhd$ ] $\lim\limits_{n\to\infty}\dfrac{a_n}{b_n}
+             \in \mathbb{R} \textbf{ existe } \textbf{ et } L > 0 
+             \implies 
+        \sum a_n \;\; \textbf{conv.} \;\; \leftrightarrow \;\; 
+        \sum b_n \;\; \textbf{conv.}$ 
+    \item[$\blacktriangleright$] Principalement pour Riemann \& géométriques
+     \end{itemize}
+    \end{Theorem}
 
 
+     \begin{Theorem}{Test sur les séries alternées}{}
+         Soit un \textbf{rang} $n_0 \in \mathbb{N}$ et 
+         soit une \textbf{série alternée} 
+         $\sum_{n=1}^{\infty } (-1)^nb_n$ telle que 
+         \begin{itemize}
+            \item[$\rhd$]  $0 \leq b_{n+1} \leq b_n \;\;(\downarrow \textbf{ et } +)$ 
+            \item[$\rhd$] $\lim\limits_{n\to\infty }b_n = 0$ 
+         \end{itemize}
+         \textbf{Alors}, 
+         \begin{itemize}
+             \item[$\blacktriangleright$]
+         $\sum  (-1)^nb_n \textbf{ conv. }$ vers $s \in
+         \mathbb{R} \;\; \forall 
+         m \geq n_0 $ \textbf{et}  
+            \item[$\blacktriangleright$] 
+        $|s - s_m| \leq b_{m+1}$
+         \end{itemize}        
+     \end{Theorem}
 
 \end{multicols*}
 \end{document}

@@ -1,11 +1,12 @@
 # Fdb version 3
-["pdflatex"] 1705005896 "SuitesNumeriques.tex" "SuitesNumeriques.pdf" "SuitesNumeriques" 1705005896
+["pdflatex"] 1705300884 "SuitesNumeriques.tex" "SuitesNumeriques.pdf" "SuitesNumeriques" 1705300886
   "../preamble.tex" 1704914782 33579 205e05554a10608e43ec8e51472b7fdf ""
   "/etc/texmf/web2c/texmf.cnf" 1674180676 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm" 1136768653 4484 b828043cbd581d289d955903c1339981 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb8t.tfm" 1136768653 6628 34c39492c0adc454c1c199922bba8363 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm" 1136768653 7040 b2bd27e2bfe6f6948cbc3239cae7444f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm" 1136768653 2532 9ad73cf4dd2173a847f2a5f5608e0b9a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm" 1136768653 3456 16dd534f88eb2bd21ebc7203786b436e ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm" 1136768653 1804 7b5f73028f6509167f47ace9d69509ed ""
@@ -355,9 +356,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1674180706 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1674180741 2798926 b564db4653efb4d4b92fdc2de7fab700 ""
-  "SuitesNumeriques.aux" 1705005884 5236 bc1cb1d94909f237752eb5bad383973f "pdflatex"
-  "SuitesNumeriques.tex" 1705005896 16111 ca1e69e2c3a41855580373b6eb607765 ""
-  "SuitesNumeriques.toc" 1705005884 976 ec6be0ee7b8d2abd8533b5a80c25c438 "pdflatex"
+  "SuitesNumeriques.aux" 1705300885 8995 6002fe8a1d1e0afc438897762dc0c592 "pdflatex"
+  "SuitesNumeriques.tex" 1705300877 25386 2d635526cd0b4da9d023aeac40f85902 ""
+  "SuitesNumeriques.toc" 1705300885 1605 a7f91b90c98f946754bb7b7f69d61a17 "pdflatex"
   (generated)
   "SuitesNumeriques.aux"
   "SuitesNumeriques.log"
