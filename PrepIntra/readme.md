@@ -22,7 +22,7 @@ This section includes my notes for **week 1**.
 - Comparison of ordor of magnitude of sequences ln, n^k, a^n, n!, n^n, etc.  
 
 <div style="display: flex; align-items: center;">
-  <img src="SuiteEtSeriesNumeriquesTexPDF1.png" style="width: 49%; flex: 1; padding: 10px;" />
+  <img src="SuiteEtSeriesNumeriquesTexPDF1.png" style="width: 49%; style="flex: 1; padding: 10px;" />
   <img src="SuiteEtSeriesNumeriquesTexPDF2.png" style="width: 49%; flex: 1; padding: 10px;" />
 </div>
 
