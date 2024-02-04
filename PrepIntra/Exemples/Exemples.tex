@@ -1,14 +1,15 @@
 \documentclass{report}
 %\usepackage[utopia]{mathdesign} 
 
-%\usepackage{amsmath,amsfonts,amsthm,amssymb,mathtools}
-\usepackage{amsmath,amsthm,mathtools}
+\usepackage{amsmath,amsfonts,amsthm,amssymb,mathtools}
+%\usepackage{amsmath,amsthm,mathtools}
 
 \input{~/Semesters/Winter2024/MAT1400Calcul1/PrepIntra/CheatSheet/preamble.tex}
 \usepackage[scr]{rsfso}
 
-\usepackage{libertine}
-%usepackage{mathpazo}
+%\usepackage{libertine}
+\usepackage[euler-digits]{eulervm}
+%\usepackage{mathpazo}
 %\usepackage{palatino}
 %usepackage{crimson}
 
@@ -198,6 +199,7 @@
   Puisque $\lim\limits_{n \to \infty }\frac{a_n}{b_n} = 1 > 0$ et que 
   $\sum_{n=1}^{\infty }b_n$ diverge, il s'ensuit que $\sum_{n=1}^{\infty }a_n$ 
   diverge également. 
+  $\lambda a_1 \vec{w_1}$
 
 
   \paragraph{Estimation du reste}
@@ -215,15 +217,18 @@
     & = \frac{1}{2m^2} 
   \end{align*}
 
-  Pour que le reste soit tel que $R_m \leq 0.005$, c'est-à-dire l'erreur
+  Pour que le reste soit tel que $R_m \leq 0.005$, 
+  c'est-à-dire l'erreur
   permise, nous avons :
   \begin{align*}
     R_m \leq 0.005 &\implies \frac{1}{2m^2} \leq 0.005 \\   
                    &\implies m \geq \sqrt{\frac{2}{0.005}} = 10 
   \end{align*}
 
-  Donc, après $m = 10$ la somme $s_n$ est telle que la différence 
-  $s - s_n$ a une erreur $R_m$ de 0.005 ou moins. On peut alors conclure que 
+  Donc, après $m = 10$ la somme $s_n$ est telle 
+  que la différence 
+  $s - s_n$ a une erreur $R_m$ de 0.005 ou moins. 
+  On peut alors conclure que 
   
   \begin{align*}
     \sum_{n=1}^{\infty }\frac{1}{n^3} \approx \sum_{k=1}^{k = 10} a_k = 
@@ -245,17 +250,22 @@
     = 1 > 0
   \end{align*}
 
-  Puisque la série harmonique diverge, on peut conclure, par la forme limite 
+  Puisque la série harmonique diverge, on peut conclure, 
+  par la forme limite 
   du teste de comparaison, que la série $\sum_{n=1}^{\infty }\sin(n)$ diverge 
   également. 
 
   \paragraph{Convergence absolue}
   \mbox{}\\
-  Évaluer la convergence de $\sum_{n=1}^{\infty }\dfrac{\sin \left(\frac{n\pi}{4}\right)}{n^2}$ 
+  Évaluer la convergence de $\sum_{n=1}^{\infty }
+  \dfrac{\sin \left(\frac{n\pi}{4}\right)}{n^2}$ 
 
   \mbox{}\\ 
-  Puisque la série oscille, nous alons évaluer les termes positifs de la fonction 
-  et établir s'il y a convergence absolue par le test de comparaison. Considérons 
+  Puisque la série oscille, nous alons évaluer les 
+  termes positifs 
+  de la fonction 
+  et établir s'il y a convergence absolue par le test de 
+  comparaison. Considérons 
   la série à termes positifs suivante : 
   \begin{align*}
       \sum_{n=1}^{\infty }|a_n| =  
@@ -270,6 +280,77 @@
   est elle même bornée par $\sum_{n=1}^{\infty }\frac{1}{n^2}$ qui est une 
   série de Riemann avec $p = 2$ et donc convergente, nous pouvons 
   conclure que $\sum_{n=1}^{\infty }a_n$ converge absoluement. 
+
+  \paragraph{Identification d'une série entière}
+      Déterminer si la série suivant est une série entière
+      \begin{align*}
+          \sum_{n=1}^{\infty }x^{n!}
+      \end{align*}        
+  \mbox{}\\ 
+  Dans cet exemple, le coefficient constant est 
+  $a_n = 1$ et $x$ est la variable de la série. Or, les termes de la série 
+  augmentent par un facteur de $n!$ et non $n$. Ainsi, puisque la série 
+  n'a pas la forme générale : 
+  \begin{align*}
+      \sum_{n=1}^{\infty }a_n(x-a)^n 
+  \end{align*}
+  on peut conclure que cette série \textbf{n'est pas} un 
+  \textit{une série entière}.
+
+
+  \paragraph{Identification d'une série entière}
+      Déterminer si la série suivant est une série entière
+      \begin{align*}
+          \sum_{n=-1}^{\infty }x^{n} 
+      \end{align*}        
+  \mbox{}\\ 
+  Cette série comment à $n = -1$, ce qui implique que le premier terme est 
+  $x^{-n}$. Par conséquent, la série ne respecte pas la condition 
+  $n \in \mathbb{N}$ et on peut conclure qu'elle n'est pas entière. 
+
+
+  \paragraph{Rayon de convergence et Test du Rapport}
+      Déterminer le rayon de convergence de la série
+      \begin{align*}
+          \sum_{n=1}^{\infty }2^nn^2x^n
+      \end{align*}
+  
+  \mbox{}\\ 
+  Soit $a_n = 2^nn^2x^n$, on a 
+  \begin{align*}
+      \lim\limits_{n \to+\infty }\sqrt[n]{|a_n|}  &= 
+      \lim\limits_{n \to+\infty }\sqrt[n]{|2^nn^2x^n|}  = 2|x|
+      \lim\limits_{n \to+\infty }\sqrt[n]{n^2}  \\ 
+                                      &= 
+      2|x|n^{\lim\limits_{n \to+\infty } \frac{1}{x}} = 2|x|n^0 = 2|x|
+  \end{align*}
+  Par le critère de Cauchy la série converge lorsque 
+  $\sum a_n = L = 2|x| < 1$. Donc, il faut que $|x| < 1/2$. 
+  ou $ -1/2 < x < 1/2 $  
+  Cela implique que $R = 1/2$. 
+
+
+  \paragraph{Rayon de convergence et Test du Rapport}
+      Déterminer le rayon de convergence de la série
+      \begin{align*}
+          \sum_{n=1}^{\infty }\frac{x^n}{n!} 
+      \end{align*} 
+  \mbox{}\\ 
+
+  Soit $a_n = \frac{x^n}{n!} $, on a 
+  \begin{align*}
+    \lim\limits_{n \to+\infty }\frac{a_{n+1}}{a_n}   &= 
+    \lim\limits_{n\to+\infty } \frac{n! x^{(n+1)}}{(n+1)!x^n}= 
+    \lim\limits_{n\to+\infty } \frac{x^{1}}{(n+1)!} \\ 
+                                          &= x \cdot 0 = 0
+  \end{align*}
+
+  L'équation $x \cdot 0$ est vraie $\forall x \in \mathbb{R}$. Ainsi, 
+  par le test du rapport, le rayon de convergence est $R = \infty$
+
+
+
+
   
 
 
