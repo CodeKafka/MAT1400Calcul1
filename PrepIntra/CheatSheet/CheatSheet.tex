@@ -462,8 +462,8 @@
      soit une \textbf{série alternée} 
      $\sum_{n=1}^{\infty } (-1)^nb_n$ telle que 
      \begin{itemize}
-        \item[$\rhd$]  $0 \leq b_{n+1} \leq b_n \;\;(\downarrow \textbf{ et } +)$ 
-        \item[$\rhd$] $\lim\limits_{n\to\infty }b_n = 0$ 
+       \item [$\rhd$ ]  $0 \leq b_{n+1} \leq b_n \;\;(\downarrow \textbf{ et } +)$ 
+       \item [$\rhd$ ] $\lim\limits_{n\to\infty }b_n = 0$ 
      \end{itemize}
      \textbf{Alors}, 
      \begin{itemize}
@@ -487,63 +487,113 @@
 
   \paragraph{Test du rapport (d'Alembert)}
   \mbox{}\vspace{0.2em}
-  Soit $\lim\limits_{n \to+\infty } \Big|\frac{a_{n+1}}{a_n}  \Big| = L$ \textbf{alors} si :   
+  Soit $\lim\limits_{n \to+\infty } \Big|\frac{a_{n+1}}{a_n}  \Big| = L$ 
+  \textbf{alors} si :   
   \begin{itemize}
-    \item [$\rhd$ ] $L = 1 \implies$ \textit{inconclusif}  
-    \item [$\blacktriangleright$ ] $L > 1 \implies \sum_{n=1}^{\infty }a_n$ \textbf{div}.   
-    \item [$\blacktriangleright$ ] $L < 1 \implies \sum_{n=1}^{\infty }a_n$ \textbf{conv}.   
+    \item [$\rhd$ ] $L = 1 \implies$ \textit{ inconclusif}  
+    \item [$\blacktriangleright$ ] $L > 1 \implies \sum_{n=1}^{\infty } a_n$ 
+      \textbf{div}.   
+    \item [$\blacktriangleright$ ] $L < 1 \implies \sum_{n=1}^{\infty } a_n$ \textbf{conv}.   
   \end{itemize}
 
 
 
   \paragraph{Test de Cauchy}
   \mbox{}\vspace{0.2em}
-  Soit $\lim\limits_{n \to+\infty } \sqrt[n]{\big| a_n \big|} = L$ \textbf{alors} si :   
+  Soit $\lim\limits_{n \to+\infty } \sqrt[n]{\big| a_n \big|} = L$ 
+  \textbf{alors} si :   
   \begin{itemize}
     \item [$\rhd$ ] $L = 1 \implies$ \textit{inconclusif}  
-    \item [$\blacktriangleright$ ] $L > 1 \implies \sum_{n=1}^{\infty }a_n$ \textbf{div}.   
-    \item [$\blacktriangleright$ ] $L < 1 \implies \sum_{n=1}^{\infty }a_n$ \textbf{conv}.
+    \item [$\blacktriangleright$ ] $L > 1 \implies \sum_{n=1}^{\infty }a_n$ 
+      \textbf{div}.   
+    \item [$\blacktriangleright$ ] $L < 1 \implies \sum_{n=1}^{\infty }a_n$ 
+      \textbf{conv}.
+  \end{itemize}
+
+  \paragraph{Défininition d'une série entière} Soit une variable 
+  $x$, les contantes $c_0, c_1, \cdots , c_n$ 
+  et $n \in \mathbb{N}$, une série 
+  est dite centrée en $a \in \mathbb{R}$ si on a :  
+  \[ \sum_{n=0}^{\infty } c_n(x-a)^n = c_0 + c_1(x-a) + c_2(x-a)^2 + \cdots \]
+
+  \paragraph{Famille de séries paramétrées par $x$} 
+  Soit l'ensemble $D$ des $x$ pour lesquels la série converge, 
+  la fonction $f : D \rightarrow  \mathbb{R}$ engendre une 
+  somme $f(x) \in \mathbb{D}$ :
+  \[ f(x) = \sum_{n=0}^{\infty } c_n(x - a)^n \]
+  \vspace{-1.5em} %vspace
+
+  \begin{table}[H]
+    \begin{center}
+      \renewcommand{\arraystretch}{2}
+      \fontfamily{flr}\selectfont
+      \footnotesize
+      \begin{tabular}{l|p{3.75cm}}
+          \arrayrulecolor{blue}\hline
+          \rowcolor{lightBlue}
+          \textcolor{myb}{Fonction} & \textcolor{myb}{Somme}
+          \\
+          \hline
+          \arrayrulecolor{black}
+          $\sin x$ & $x - \frac{x^3}{3!} +  \frac{x^5}{5!} 
+          -  \frac{x^7}{7!} + \dots $ 
+          \\
+          \hline
+          $\cos x$ & $1 - \frac{x^2}{2!} +  \frac{x^4}{4!} 
+          -  \frac{x^6}{6!} + \dots $ 
+          \\
+          \hline
+          $\dfrac{1}{1-x}$ & $\forall \; |x| <1 \textcolor{red}{\colon}  
+          1 + x + x^2 + x^3 + \dots $  
+          \\
+          \hline 
+          $e^x$ & $1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} \cdots$ 
+          \\
+          \hline
+          $\ln(1 + x)$ & $\forall \; |x| < 1 \textcolor{red}{\colon} 
+          x - \frac{x^2}{2} +  \frac{x^3}{3} 
+          -  \frac{x^4}{4} + \dots $ 
+          \\
+          \hline
+          $\arctan (x)$ & $\forall \; |x| < 1 \textcolor{red}{\colon}  
+          x - \frac{x^3}{3} +  \frac{x^5}{5!} 
+          -  \frac{x^7}{7!} + \dots $ 
+          \\
+          \hline
+          $(1 + x)^k$ &           
+              $\forall \; |x| < 1 \textcolor{red}{\colon}  
+              1+ kx + \frac{k(k-1)}{2!}x^2 
+                    + \frac{k(k-1)(k-2)}{3!}x^3 
+              \cdots$
+          \\
+          \hline
+
+          \end{tabular}
+  \end{center}
+  \end{table}
+
+  \paragraph{Rayon de convergence}
+  Soit la série $S = \sum_{n=0}^{\infty }c_n(x - a)^n$, il a 
+  \textit{trois possibilités} :   
+  \begin{itemize}
+    \item [$\rhd$ ] $S$ \textbf{conv.} \textcolor{red}{à}   
+           $x = a \implies  R = 0$  
+    \item [$\rhd$ ] $\forall \; x, \; S \textbf{ conv.} \implies  
+                 R = \infty$       
+    \item [$\rhd$ ] $\exists R > 0 \colon $ 
+        \begin{itemize}
+          \item [$\blacktriangleright$ ] $|x - a| < R \implies 
+            S \textbf{ conv.}  $ 
+          \item [$\blacktriangleright$ ] $|x - a| > R \implies 
+            S \textbf{ div.}$ 
+        \end{itemize}
   \end{itemize}
 
 
 
-\usetikzlibrary{trees}
 
 
 
-
-
-\scalebox{1.2}{
-  \dirtree{%
-  .1 f(m, n).
-  .2 f(m-1, n).
-  .3 f(m-2, n).
-  .4 $\vdots$.
-  .5 f(j+1, n).
-  .6 f(j, n) $\rightarrow$ 0 (cas de base).
-  .6 f(j+1, n-1).
-  .7 $\vdots$.
-  .8 f(j+1, k+1).
-  .9 f(j, k+1) $\rightarrow$ 0 (cas de base).
-  .9 f(j+1, k) $\rightarrow$ ? (cas de base).
-  .8 f(j+1, k) $\rightarrow$ ? (cas de base).
-  .3 f(m-1, n-1).
-  .4 $\vdots$.
-  .2 f(m, n-1).
-  .3 f(m-1, n-1).
-  .4 $\vdots$.
-  .5 f(j+1, n-1).
-  .6 f(j, n-1) $\rightarrow$ 0 (cas de base).
-  .6 f(j+1, n-2).
-  .7 $\vdots$.
-  .8 f(j+1, k+1).
-  .9 f(j, k+1) $\rightarrow$ 0 (cas de base).
-  .9 f(j+1, k) $\rightarrow$ ? (cas de base).
-  .8 f(j+1, k) $\rightarrow$ ? (cas de base).
-  .3 f(m, n-2).
-  .4 $\vdots$.
-  }
-}
 
 
 
