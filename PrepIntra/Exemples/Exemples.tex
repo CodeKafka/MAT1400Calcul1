@@ -102,7 +102,7 @@
   \begin{align*}
     \lim\limits_{n \to+\infty }\dfrac{\ln(1+x)}{x} 
     &= \lim\limits_{n \to+\infty }\cancel{\frac{\ln(1)}{x}} + \frac{\ln(x)}{x}    \\ 
-    &\overset{\mathcal{H}}{=} 
+    &\overset{\mathcal{h}}{=} 
   \lim\limits_{n\to+\infty } \frac{1/x}{1} = 0
   \end{align*}
 
@@ -348,6 +348,79 @@
   L'équation $x \cdot 0$ est vraie $\forall x \in \mathbb{R}$. Ainsi, 
   par le test du rapport, le rayon de convergence est $R = \infty$
 
+
+  \paragraph{Trouver l'intervale de convergence}
+  Soit la série $\sum_{n=2}^{\infty }\frac{x^{3n}}{n(\ln n)^2}$, 
+  trouver le centre, $a$. 
+
+  \mbox{}\\
+  Soit $a_n = \frac{x^{3n}}{n(\ln n)^2}$ nous pouvons utiliser le 
+  test du rapport pour déterminer la convergence de la série. 
+
+
+  \begin{align*}
+    \lim\limits_{n \to+\infty }  \Big|\frac{a_{n+1}}{a_n}\Big| &=  
+    \lim\limits_{n \to+\infty } \frac{x^{3(n+1)}}{(n+1)(\ln n + 1 )^2}  
+    \cdot                \frac{n(\ln n)^2}{x^{3n}} \\ 
+                                          &\overset{\mathcal{H}}{=}
+      |x|^3 
+   \end{align*}
+
+   Par le test du  rapport, la série converge lorsque 
+   $\sum_{n=2}^{\infty }a_n = L = |x|^3 < 1$. Donc, il faut que 
+   $x < 1$ ou $x < -1$. Cela implique que $R = 1$. 
+   Puisque $R = 1 > 0$, il y a donc quatre possibilités. 
+   Pour déterminer l'intervale de convergence, il faut faut étudier 
+   la convergence aux points limites, c'est-à-dire $x = -1$ et 
+   $x = 1$. 
+   \vspace{1em}\\
+   Pour $x = 1$, $\sum_{n=2}^{\infty }\frac{x^{3n}}{n(\ln n)^2} = 
+     \sum_{n=2}^{\infty }\frac{1}{n(\ln n)^2}$. On peut utiliser le 
+     test de l'intégrale : 
+
+     \begin{align*}
+        \int_{x=2}^{\infty }f(x)dx = \int_{x=2}^{\infty } 
+        \frac{\ln x dx}{(\ln x)^2} = 
+        \Eval{\Big| \frac{-1}{\ln x}  \Big|}{2}{\infty}
+        = \frac{1}{\ln 2} \in \mathbb{R} 
+     \end{align*}
+
+     Selon le test de l'intégrale, la série converge à $\frac{1}{\ln 2}
+     \in \mathbb{R}$, pour le cas limite $x = 1$.  
+     \vspace{1em} \\ 
+      Pour $x = -1$, $\sum_{n=2}^{\infty }\frac{x^{3n}}{n(\ln n)^2} = 
+      \sum_{n=2}^{\infty }\frac{(-1)^{3n}}{n(\ln n)^2}$. On peut utiliser 
+      le test des séries alternées avec
+
+      \begin{align*}
+       \sum_{n=2}^{\infty }\frac{(-1)^{3n}}{n(\ln n)^2} = 
+       \sum_{n=2}^{\infty }\frac{(-1)^{n}}{n(\ln n)^2} = 
+       \sum_{n=2}^{\infty }(-1)^n b_n, \; b_n = \frac{1}{n(\ln n)^2}
+      \end{align*}
+      Puisque le séries est positive est décroissante 
+      $\forall \; n > m = 2$, par le test des séries alternées, 
+      la séries converge. Après avoir vérifé les points limites, 
+      nous pouvons conclure que $1 \in I$ et $-1 \in I$. 
+      L'intervale de convergence est donc 
+      $I = [-1, 1]$. 
+
+
+      \paragraph{Trouver l'intervale de convergence}
+      Calculer $s = \sum_{n=2}^{\infty } \frac{1}{n (\ln n)^2}$ à 
+      $0.1$ près. 
+      \vspace{1em}\\
+      Soit $s_n=\sum_{k=2}^n \frac{1}{n(\ln n)^2}$. 
+      La fonction $f(x)=\frac{1}{x(\ln x)^2}$ est continue, positive et décroissante 
+      sur $[2, \infty)$. Ainsi, l'estimation du reste pour le test de l'intégrale 
+      nous dit que :
+      $$
+      \int_{x=n+1}^{\infty } f(x) d x \leq R_n=s-s_n \leq \int_{x=n}^{\infty} f(x) d x .
+      $$
+      %Par conséquent,
+      $$
+      %\left[\frac{-1}{\ln x}\right]_{n+1}^{\infty}=\frac{1}{\ln (n+1)} 
+      %\leq R_n=s-s_n=\left[\frac{-1}{\ln x}\right]_n^{\infty}=\frac{1}{\ln n} .%
+      $$%
 
 
 
