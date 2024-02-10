@@ -405,7 +405,7 @@
       $I = [-1, 1]$. 
 
 
-      \paragraph{Trouver l'intervale de convergence}
+      \paragraph{Estimation du reste}
       Calculer $s = \sum_{n=2}^{\infty } \frac{1}{n (\ln n)^2}$ à 
       $0.1$ près. 
       \vspace{1em}\\
@@ -416,11 +416,126 @@
       $$
       \int_{x=n+1}^{\infty } f(x) d x \leq R_n=s-s_n \leq \int_{x=n}^{\infty} f(x) d x .
       $$
-      %Par conséquent,
+      Par conséquent,
       $$
-      %\left[\frac{-1}{\ln x}\right]_{n+1}^{\infty}=\frac{1}{\ln (n+1)} 
-      %\leq R_n=s-s_n=\left[\frac{-1}{\ln x}\right]_n^{\infty}=\frac{1}{\ln n} .%
-      $$%
+      \left[\frac{-1}{\ln x}\right]_{n+1}^{\infty}=\frac{1}{\ln (n+1)} 
+      \leq R_n=s-s_n=\left[\frac{-1}{\ln x}\right]_n^{\infty}=\frac{1}{\ln n} .
+      $$
+      Sachant que le reste est borné par ces frontières, on cherche un 
+      $n$ tel que $0.1 < \frac{1}{\ln n}$. On a donc : 
+      \[ n = e^{\frac{1}{0.1}} =   e^{10} \]
+
+      \paragraph{Convergence d'une série géométrique}
+      Soit la série $1 + t + t^2 + t^3 + \cdot + t^n$ 
+          $ = \sum_{n=0}^{\infty } t^n $ 
+      quelle est l'intervalle de convergence de cette série ?
+      \mbox{}\\ 
+      Nous savons 
+      \begin{align*}
+        \lim\limits_{n \to+\infty } \left|\frac{t^{n+1}}{t^n}\right|   = |t|
+      \end{align*}  
+      Par le test du rapport, la série converge lorsque $|t| < 1$.  
+      Nous avons donc l'intervale de convergence $I = ]-1, 1[$ ; 
+      et nous avons $R = 1$  puisque  $\; \exists R > 0 : |t| < R$. 
+
+      \paragraph{Développement en série entière}
+      Trouver le développement en série entière de  
+      $\frac{1}{t+5}$ et trouver son rayon de convergence.  
+      Soit la série géométrique :
+      \begin{align*}
+        \sum_{n=}^{\infty }ar^n = \frac{1}{1 - r} 
+      \end{align*}
+      nous pouvons exprimer l'expression donnée de la façon suivante : 
+
+
+      \begin{align*}
+        \frac{1}{t+5} &= \frac{1}{\frac{1}{5}(1 + \frac{x}{5} )}  
+                       = \frac{1}{\frac{1}{5}(1 - t) }  : t = -\frac{1}{5}x \\
+                      &= \frac{1}{5} \sum_{n=0}^{\infty }(-\frac{1}{5})^n,
+                      \;\; \forall \left|-\frac{1}{5}x \right| < 1 \\ 
+                      & \implies  \frac{1}{5} \sum_{n=0}^{\infty }(-\frac{1}{5})^n
+                      , \;\; \forall \;\; |x| < 5
+      \end{align*}      
+
+
+      \paragraph{Intervalle de convergence d'une série alternée}
+      La série $\sum_{n=1}^{\infty } \frac{(-1)^n}{5^{n+1}}x^n$ est 
+      convergente sur quelle intervalle ? 
+
+
+      \begin{align*}
+        \sum_{n=1}^{\infty } \frac{(-1)^n}{5^{n+1}}x^n 
+        &= 
+        \sum_{n=1}^{\infty } (-1)^nb_n, \;\; b_n = \frac{x^n}{5^{n+1}}
+      \end{align*}
+
+      Il faut donc trouver des $x$ tels que 
+      $b_{n+1} \leq b_n, \;\; \forall n > m$ Nous devons donc considérer 
+      les valeurs $x < 5 \in \mathbb{N}$. En évaluant la limite, nous avons :
+
+      \begin{align*}
+          \lim\limits_{n \to-\infty}b_n  &= 
+          \lim\limits_{n \to+\infty }\frac{x^n}{5^{n+1}} = 
+          \frac{1}{5}\lim\limits_{n \to+\infty }\left(\frac{x}{5}\right)^n  
+      \end{align*}
+
+      Qui est alors une série géométrique de raison 
+      $ r = \frac{x}{5}$ Donc, 
+      $\forall \;\; \left| \frac{x}{5}  \right| < 1$ ou 
+      $|x| < 5$, la série converge. L'intervalle de convergence 
+      est donc $] -5, 5[$. 
+
+
+      \paragraph{Développement en série entière}
+      Trouver une série entière pour $\sum_{n=1}^{\infty }\frac{x^{2023}}{x+5}$ 
+      et calculez son rayon de convergence. 
+
+      \begin{align*}
+        \sum_{n=0}^{\infty }\frac{x^{2023}}{x+5} 
+        &= 
+        x^{2023} \times \sum_{n=0}^{\infty }\frac{1}{x+5} 
+        = 
+        x^{2023} \sum_{n=1}^{\infty } \frac{1}{5(\frac{x}{5} + 1)} \\
+        &= 
+        \frac{x^{2023}}{5}\sum_{n=0}^{\infty } \frac{1}{1 - t} \;\; : 
+        t = - \frac{x}{5}  
+        = 
+       \frac{x^{2023}}{5} \sum_{n=0}^{\infty } \left( - \frac{x}{5} \right)^n \\ 
+        &= \sum_{n=0}^{\infty }(-1)^n  \frac{x^{2023 + n}}{5^{n+1}} 
+      \end{align*}
+
+      Par la propriété des séries géométriques, 
+      l'intervale de convergence 
+      est donné par  :
+      \[ I = (-5, 5) \]
+
+
+      \paragraph{Série entière et rayon de convergence}
+      Trouver un développement en série entière de  
+      $\frac{1}{(1-x)^2}$ et  trouver son rayon de convergence.
+
+      \mbox{}\\
+      \begin{align*}
+        \sum_{n=0}^{\infty }r^n =  \frac{1}{1 - x}  
+          &\leftrightarrow 
+              \frac{d}{dx}\left( \sum_{n=0}^{\infty }x^n\right) 
+              = 
+              \frac{d}{dx}\left( \frac{1}{1 - x}\right) \\
+          &\implies
+          \frac{1}{(1 - x)^2} = \sum_{n=1}^{\infty }nx^{n-1} \\ 
+          &= 
+          \sum_{u=0}^{\infty }(u+1)x^{u}
+              \;\ : u = n - 1
+      \end{align*}    
+
+      La série converge pour $|u + 1| < 1$ ou $|(n -1) + 1| < 1$, 
+      c'est-à-dire $|n| < 1$. Le rayon de convergence est donc 
+      1. 
+
+
+
+
+
 
 
 

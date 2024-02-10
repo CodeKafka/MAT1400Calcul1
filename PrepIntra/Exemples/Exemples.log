@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.1.25)  8 FEB 2024 23:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.1.25)  9 FEB 2024 19:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1456,20 +1456,25 @@ Underfull \hbox (badness 7963) in paragraph at lines 353--355
 [] []\T1/lmr/bx/n/10 Trou-ver l'in-ter-vale de conver-gence[] \T1/lmr/m/n/10 Soit la sé-rie
  []
 
-[2] [3] (./Exemples.aux) ) 
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 517--518
+
+ []
+
+[4] (./Exemples.aux) ) 
 Here is how much of TeX's memory you used:
- 52386 strings out of 477956
- 1187328 string characters out of 5838909
+ 52394 strings out of 477956
+ 1187422 string characters out of 5838909
  1895590 words of memory out of 5000000
- 71640 multiletter control sequences out of 15000+600000
+ 71642 multiletter control sequences out of 15000+600000
  561635 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 105i,18n,103p,809b,740s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 105i,18n,103p,809b,760s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/euex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eurm5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmbx10.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmbx12.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmr10.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmr12.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmr17.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmr7.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Exemples.pdf (4 pages, 285709 bytes).
+Output written on Exemples.pdf (5 pages, 294249 bytes).
 PDF statistics:
- 210 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
+ 220 PDF objects out of 1000 (max. 8388607)
+ 137 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
