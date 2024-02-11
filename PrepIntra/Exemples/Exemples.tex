@@ -533,6 +533,49 @@
       1. 
 
 
+      \paragraph{Série dew Taylor et MacLaurin}
+      Trouver la série de McLaudrin et son rayon de convergence 
+      \begin{align*}
+          \frac{1}{1 - x} 
+      \end{align*}
+
+      Pour la fonction $f(x) = (1 - x)^{-1}$, 
+      nous avons les dérivées suivantes et les 
+      évaluations suivantes : 
+      \begin{align*}
+        f^{\prime}(x) &= \frac{1}{(1 - x)^2}   
+              \;\; f^{\prime}(a) = 1 \\ 
+        f^{\prime\prime}(x) &=  \frac{2}{(1 - x)^3}  
+          \;\; f^{\prime\prime}(a) = 2 \\
+        f^{\prime\prime\prime}(x) &=  \frac{3 \times 2}{(1 - x)^4} 
+          \;\; f^{\prime\prime\prime}(a) = 6 \\
+        f^{\prime\prime\prime\prime}(x) &=  
+              \frac{4 \times 3 \times 2}{(1 - x)^5} 
+                  \;\; f^{\prime\prime\prime}(a) = 24 \\
+        f^{n}(a) &= f^{n}(0) = n! \;\; \forall \; n \in \mathbb{N}
+      \end{align*}
+
+      Nous avons alors :
+
+      \begin{align*}
+        \frac{1}{1 - x} &= \sum_{n=0}^{\infty }c_n(x)^n 
+                         = \sum_{n=0}^{\infty }\frac{f^{n}(0)}{n!}x^n 
+                         = \sum_{n=0}^{\infty }\frac{n!}{n!}x^n 
+                         = \sum_{n=0}^{\infty }x^n 
+      \end{align*}  
+
+      La série de MacLaurin que nous venons de dérivé est une 
+      série géométrique de raison $x$ qui converge 
+      tant que les valeurs de $x$ sont telles que 
+      $|x| < 1$. Le rayon de convergence est donc $R = 1$ et 
+      la série converge dans l'intervalle $(-1, 1)$.
+
+      \paragraph{Série de Taylor et MacLaurin}
+      Trouver la série de McLaudrin et son rayon de convergence 
+      de la série $e^x$. 
+
+
+
 
 
 

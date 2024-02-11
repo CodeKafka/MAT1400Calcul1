@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1707523284.39709 "Exemples.tex" "Exemples.pdf" "Exemples" 1707523286.16953 0
+["pdflatex"] 1707589021.48816 "Exemples.tex" "Exemples.pdf" "Exemples" 1707589023.162 0
   "/home/cryptopsy/.texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1706332752.5456 190829 64549da7decb2fc26e6c35819bbab051 ""
   "/home/cryptopsy/Semesters/Winter2024/MAT1400Calcul1/PrepIntra/CheatSheet/preamble.tex" 1706316238.33231 33652 af59b59304760fecffe169e592962452 ""
   "/home/cryptopsy/texmf/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
@@ -366,8 +366,8 @@
   "/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1704400182 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1704400182 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1706195554 6774480 524fab00a125c67c6de005a21d2ae0e3 ""
-  "Exemples.aux" 1707523285.93656 3320 76f9c07e55e3e03c203b00418fa6417b "pdflatex"
-  "Exemples.tex" 1707523283.63995 18610 844524c3c934d35f9a55e7168ac47309 ""
+  "Exemples.aux" 1707589022.93248 3555 85453808ee07eef3137cf28c382b2608 "pdflatex"
+  "Exemples.tex" 1707589018.08915 20233 116996bdd6add063814020bec8f4da6e ""
   (generated)
   "Exemples.aux"
   "Exemples.log"
