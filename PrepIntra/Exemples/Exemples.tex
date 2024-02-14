@@ -574,6 +574,296 @@
       Trouver la série de McLaudrin et son rayon de convergence 
       de la série $e^x$. 
 
+      \mbox{}\\ 
+      Pour la fonction $f(x) = e^x$, nous avons les dérivés et 
+      évaluations suivantes : 
+
+      \begin{align*}
+        f^{\prime}(x) &=  f^{\prime\prime}(x) = f^{n}(x), \;\; 
+            \forall \;\; n \in \mathbb{N} \\
+        f^{\prime}(a) &= e^{a} = e^{0} = 1, 
+            \;\;\forall \;\; n \in \mathbb{N}
+      \end{align*}
+
+      Ainsi, selon la formule de Taylor, nous avons  : 
+
+      \begin{align*}
+        e^{x} &= f(0) + \frac{f^{\prime}(a)}{1!}(x - a) 
+                   + \frac{f^{\prime\prime}(a)}{2!}(x - a)^2  + \cdots \\  
+        e^x &= 1    + \frac{x}{1!} + \frac{x^2}{2!} 
+                   + \frac{x^3}{3!} +\cdots  \\  
+        e^x &= \sum_{n=0}^{\infty }\frac{x^n}{n!} 
+      \end{align*}  
+
+      EN appliquant le test de d'Alembert, nous avons : 
+
+      \begin{align*}
+        \lim\limits_{n\to+\infty }\left| \frac{a_{n+1}}{a_n}  \right| &= 
+              \lim\limits_{n \to+\infty } 
+              \frac{x^{n+1}}{(n+1)!} \frac{n!}{x^n}  
+         = 
+        \lim\limits_{n \to+\infty } \frac{x}{(n+1)} \\
+        &= 0 = L < 1 
+      \end{align*} 
+      Par le critère d'Alembert $\forall \;\; x \in \mathbb{R}$, la série 
+      converge. Le rayon de convergence est donc $R = \infty$
+
+
+      \paragraph{Série de Taylor et MacLaurin}
+      Trouver la série de McLaudrin et son rayon de convergence 
+      de la série $\sin x$
+      
+      \mbox{}\\
+      Pour la fonction $f(x) = \sin x $, nous avons les dérivées et 
+      évaluations suivantes : 
+
+      \begin{align*}
+        &f^{\prime}(x) = \cos x \quad f^{\prime}(0) = 1 \\ 
+        &f^{\prime\prime}(x) = -\sin x \quad f^{\prime\prime}(0) = 0 \\ 
+        &f^{\prime\prime\prime}(x) -\cos x \quad 
+            f^{\prime\prime\prime}(0) = -1  \\ 
+        &f^{4}(x) = sin(x) \quad f^{4}(0) = 0 
+      \end{align*}
+
+      Nous avons alors 
+
+      \begin{align*}
+          \sin x &= \sum_{n=0}^{\infty } 0 + \frac{x}{1!} + \frac{0}{2!}  
+          + \frac{-x^3}{3!} + \frac{0}{4!} + \frac{x^5}{5!} + \cdots   
+      \end{align*}
+
+      De façon générale, tous les termes pairs sont tels que  
+      $f^{2n}(x) = 0 $ et les termes impairs sont tels que  
+      $f^{2n+1}(x) = (-1)^n$. Nous pouvons alors généraliser : 
+
+      \[ f^{2n+1}(x) = (-1)^n \]
+
+      \begin{align*}
+        \sin x = \sum_{n=0}^{\infty }\frac{f^{n}(x)}{n!}x^n  
+        = \sum_{k=0}^{\infty } \frac{f^{2k+1}}{(2k+1)!}x^{kn+1}  
+        = \sum_{k=0}^{\infty } \frac{(-1)^k}{(2k+1)!}x^{2k+1} 
+      \end{align*}  
+
+      Il s'agit d'une série alternée que nous pouvons évaluer avec 
+      le test du rapport : 
+
+      \begin{align*}
+        \lim\limits_{k \to+\infty } \left| 
+        \frac{(-1)^{k+1}x^{2k+2}}{(2k +2)(2k+ 1)!} \right|
+        \left| \frac{(2k + 1)!}{(-1)^k x^{2k + 1}} \right| &=  
+        \lim\limits_{k \to+\infty }  = \frac{x}{2k + 2} \\ 
+        &= 
+        0 = L < 1, \;\; \forall \;\; x \in \mathbb{R}
+      \end{align*} 
+      \noindent
+      Ainsi, par le test d'Alembert, la série converge 
+      pour tout $x$ et le rayon de convergence est donc 
+      $R = \infty$ . 
+
+
+      \paragraph{Série de Taylor et MacLaurin}
+      Trouver la série de McLaudrin et son rayon de convergence 
+      de la série $\cos x$
+      
+      \mbox{}\\
+      Pour la fonction $f(x) = \cos x $, nous avons les dérivées et 
+      évaluations suivantes : 
+
+      \begin{align*}
+        &f^{\prime}(x) = -\sin x \quad f^{\prime}(0) = 0 \\ 
+        &f^{\prime\prime}(x) = -\cos x \quad f^{\prime\prime}(0) = -1 \\ 
+        &f^{\prime\prime\prime}(x) = \sin x \quad 
+            f^{\prime\prime\prime}(0) = 0  \\ 
+        &f^{4}(x) = \cos x \quad f^{4}(0) = 1 
+      \end{align*} 
+
+      Nous observons alors que de façon générale, 
+      
+      $f^{2n+1}(0) = 0$ et $f^{2n}(0) = (-1)^{n}$
+
+      \begin{align*}
+          \cos x = \sum_{n=0}^{\infty }\frac{f^{n}(0)}{n!}x^n  
+          = 
+          \sum_{k=0}^{\infty }\frac{f^{2k}(0)}{k!}x^{k} 
+          = 
+          \sum_{k=0}^{\infty }\frac{(-1)^k}{2k!}x^{2k} 
+      \end{align*}
+
+      Le test du rapport nous permet d'évaluer la convergence : 
+
+
+      \begin{align*}
+          \lim\limits_{k \to+\infty }  
+              \left|
+                  \frac{x^{2k}x}{(2k + 1)2k!} 
+              \right|
+              \left|
+                  \frac{2k!}{x^{2k}} 
+              \right|
+          &= 
+          \lim\limits_{k \to+\infty }\frac{x}{(2k + 1)}   
+          \\ 
+          &= 0 = L < 1 \;\; \forall \;\; x \in \mathbb{R}
+      \end{align*}      
+
+      Ainsi, par le test d'Alembert, la série converge 
+      pour tout $x$ et le rayon de convergence est donc 
+      $R = \infty$ . 
+
+
+      \paragraph{Série de Taylor et MacLaurin}
+      Trouver la série de McLaudrin et son rayon de convergence 
+      de la série $(1 + x)^k$
+      
+      \mbox{}\\
+      Pour la fonction $f(x) = (1 + x)^k $, nous avons les dérivées et 
+      évaluations suivantes : 
+
+
+      \begin{align*}
+        f^{\prime}(x) = k(1 + x)^{k - 1}  
+            \quad %\quad 
+        f^{\prime}(0) = k 
+            \\ 
+        f^{\prime\prime}(x) = (k - 1)k(1 + x)^{k - 2}
+            \quad %quad 
+        f^{\prime\prime}(x) = k(k - 1)
+        \\ 
+        f^{\prime\prime\prime}(x) = (k - 2)(k - 1)k(1 + x)^{k - 3}
+          \quad %quad 
+        f^{\prime\prime\prime}(0) = k(k - 1)(k - 2)
+        \\
+        \vdots 
+        \\
+        f^{n}(x) = k(k - 1)(k - 2)\cdots(k - n + 1)
+        \\ 
+        = \frac{k!}{(k - n)!}  = {k \choose n}
+      \end{align*}
+
+
+      Nous avons alors la représentation suivante : 
+
+      \begin{align*}
+        (1 + x)^k &= \sum_{n=0}^{\infty }\frac{f^{(n)}(0)}{n!}x^n 
+                  = \sum_{d=0}^{\infty } \frac{k!}{d!(k - d)!}x^d 
+      \end{align*}
+
+      En utilisant le test d'Alembert, nous obtenons : 
+
+      \begin{align*}
+          \lim\limits_{d \to+\infty }
+              \left| 
+                  \frac{a_{d+1}}{a_d} 
+              \right|
+          &= 
+          \lim\limits_{d \to+\infty }  
+          \left| 
+          \frac{k!xx^d}{(d+1)d!(k - d - 1)!} 
+          \right|
+          \left| 
+          \frac{d!(k-d)(k-d -1)!}{x^d k!} 
+          \right|
+          \\
+          &=  
+          \lim\limits_{d \to+\infty }\frac{(k - d)x}{(d + 1)} 
+          = 
+          1|x|
+      \end{align*}    
+      Ainsi, la série converge pour toutes valeur de $x$ telle que 
+      $x < 1$ et le rayon de convergence est $R = 1$ . 
+
+
+
+      \paragraph{Série de Taylor et MacLaurin}
+      Trouver la série de McLaudrin et son rayon de convergence 
+      de la série $\ln(1 + x)$
+      
+      \mbox{}\\
+      Pour la fonction $f(x) = \ln(1 + x)$, nous avons les dérivées et 
+      évaluations suivantes : 
+
+      \begin{align*}
+        f^{\prime}(x) = \frac{1}{1 + x}   
+            \quad f^{\prime}(0) = 1 \quad 
+        f^{\prime\prime}(x) =  \frac{-2}{(1 + x)^2} 
+            \quad f^{\prime\prime}(0) =  -1 
+        \\ 
+        f^{\prime\prime\prime}(x) = \frac{2}{(1 + x)^3} 
+            \quad f^{\prime\prime\prime}(0) = 2 \quad
+        f^{4}(x) = \frac{-2 \cdot 3}{(1 + x)^4} 
+            \quad f^{4}(0) = -6 
+            \\
+            \cdots 
+            \\
+            f^{n}(x) = \frac{(-1)^{n+1}n!}{(1 + x)^n} 
+            \\ 
+            f^{n}(0) = (-1)^{n+1}n!
+      \end{align*}
+
+      Nous avons alors la série de McLaurin suivante : 
+      
+
+      \begin{align*}
+        \ln(x + 1) &= \sum_{n=0}^{\infty }\frac{f^{n}(0)}{n!}x^n 
+          = 
+          \sum_{n=0}^{\infty }\frac{(-1)^{n+1}(n-1)!}{n(n-1)!}x^{n+1}          
+          \\ 
+          &= 
+          \sum_{n=0}^{\infty }\frac{(-1)^{n+1}x^{n+1}}{n} 
+      \end{align*}
+
+      En appliquant le test du rapport, on obtient :
+
+      \begin{align*}
+          \lim\limits_{n \to+\infty } 
+              \left| 
+              \frac{a_{n+1}}{a_n} 
+              \right|
+          &= 
+          \lim\limits_{n \to+\infty }       
+          \left| 
+          \frac{x^{n+1}x}{n+1} 
+          \right| 
+          \left|
+          \frac{n}{x^{n+1}} 
+          \right|
+          = 
+          \lim\limits_{n \to+\infty }  
+          \left| 
+          \frac{nx}{n+1} 
+          \right|
+          \\ 
+          &= 
+          |x| 
+      \end{align*}  
+
+      Donc, la série converge pour tout $|x| < 1$ et et rayon de 
+      convergence de la série est $R = 1$ . 
+
+      \paragraph{Inégalité de Taylor}
+      Montrer que $\ln(1 + x)$ est égale à sa série de 
+      McLaurin pour $|x| < 1$. 
+
+      \begin{align*}
+          \ln(1 + x) = \sum_{n=0}^{\infty }\frac{(-1)^n(n-1)}{n(n-1)!} 
+                      x^{n + 1}
+      \end{align*}      
+
+      Soit la $n$-ième dérivée de $f$, 
+      $f^{n}(x) = \frac{(-1)^{n+1}n!}{(1 + x)^n}$
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
