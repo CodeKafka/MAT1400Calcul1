@@ -486,7 +486,7 @@
           \textbf{mais} $\neg(\sum_{n=1}^{\infty }\frac{1}{n})$ conv.  
 
   \paragraph{Test du rapport (d'Alembert)}
-  \mbox{}\vspace{0.2em}
+  \mbox{}\vspace{0.2em}\\
   Soit $\lim\limits_{n \to+\infty } \Big|\frac{a_{n+1}}{a_n}  \Big| = L$ 
   \textbf{alors} si :   
   \begin{itemize}
@@ -589,6 +589,183 @@
         \end{itemize}
   \end{itemize}
 
+  \paragraph{Intervale de convergence}
+  Soit $R$, le rayon de convergence d'une série 
+  $\sum_{n=1}^{\infty }c_n(x - a)^n$,  
+  l'\textbf{intervale de convergence} $I$ est donné par : 
+  \begin{itemize}
+    \item [$\rhd$ ]\textbf{Si}  $R = 0 \implies  I = a = [a, a]$
+    \item [$\rhd$ ] Si $R = \infty \implies  I = \mathbb{R} $
+    \item [$\rhd$ ] \textbf{Si} $R > 0$ \textbf{et} $R \in \mathbb{R}$    
+      \begin{itemize}
+        \item [$\blacktriangleright$ ] $I = ]a - R, a + R[$
+        \item [$\blacktriangleright$ ] $I = ]a - R, a + R]$
+        \item [$\blacktriangleright$ ] $I = [ a - R, a + R[$
+        \item [$\blacktriangleright$ ] $I = [ a - R, a + R] $
+      \end{itemize}
+  \end{itemize}
+
+  \paragraph{Dérivation et intégration termes à termes}
+  Soit la série $S = \sum_{n=0}^{\infty }c_n(x - a)^n$ 
+  ayant un rayon de convergence $R > 0$, et $f(x) = S$ est 
+  \textbf{dérivable} sur $(a-R, a + R)$, \textbf{alors},     
+  \begin{itemize}
+    \item [$\rhd$ ] $f^{\prime}(x) = \sum_{n=1}^{\infty }na_n(x-a)^{n-1}$ 
+    \item [$\rhd$ ] $\int f(x) dx = 
+           C + \sum_{n=0}^{\infty }\frac{(x-a)^{n+1}}{n+1}$
+  \end{itemize}
+
+  \paragraph{Expression d'une fonction en série géométrique}
+  Chaque fonction $f : (a - R, a + R) \rightarrow \mathbb{R}$ peut être 
+  approximé par une série géométrique :
+  \begin{align*}
+      f(x) &= \sum_{n=0}^{\infty }c_n(x - a)^n \\ 
+           &= c_0 + c_1(x - a) + c_2(x - a)^2 + \dots
+  \end{align*}    
+  Pour trouver les \textbf{coefficients} $c_0, c_1, \dots c_n$, on a :
+
+  \tiny{
+  
+  \begin{align*}
+    &f(a)  = \textcolor{red}{c_0}   + 
+      \cancel{c_1(a - a)} + \cancel{c_2(a - a)^2} + \cdots 
+            \cancel{c_n(a - a)^n } \\ 
+    &f^{\prime}(a) = 0 + \textcolor{red}{c_1} + 
+          \cancel{2c_2(a - a)} + \cancel{3c_3(a - a)^2} + \cdots 
+          + \cancel{nc_n(a - a)^n} \\
+    &f^{\prime\prime}(a) = 0 + 0 + \textcolor{red}{2c_2} + 
+          \cancel{6c_2(a - a)} + \cancel{12c_4(a - a)^2} + \cdots 
+          + \cancel{nc_n(a - a)^n} \\
+    &f^{\prime\prime\prime}(a) = \textcolor{red}{6(c_3)} 
+                = 3!c_3 \\
+    &f^{4}(a) = \textcolor{red}{24c_4} = 4!c_4  
+  \end{align*}  
+  }
+  \noindent
+  On peut donc exprimer les coefficients en généralisant et on 
+  obtient 
+  alors la formule de Taylor :
+  \begin{align*}
+        c_n =  \frac{f^{n}(a)}{n!} 
+  \end{align*}
+
+  Ainsi, nous avons l'expression générale : 
+  
+  \begin{align*}
+      &\sum_{n=0}^{\infty } \frac{f^{n}(a)}{n!}(x - a)^n 
+       \textbf{ Taylor}   
+      \\ 
+      &\sum_{n=0}^{\infty } \frac{f^{n}(0)}{n!}(x)^n 
+       \textbf{ McLaurin}   
+      \\
+      &f(a) + \frac{f^{\prime}(a)}{1!}(x - a) + 
+             \frac{f^{\prime\prime}(a)}{2!}(x - a)^2 + 
+             \cdots \textbf{Expression générale}  
+  \end{align*}    
+
+  \paragraph{Polynôme de Taylor}
+  Si une $f(x)$ est \textit{infiniement dérivable}, 
+  et est représentée par une série entière 
+  \textbf{alors} cette série est la 
+  \textit{série de Taylor} de $f$.   
+  \vspace{-1em}
+
+  \begin{align*}
+    T_n(x) = f(a) &+ \frac{f^{\prime}(a)}{1!}(x - a) + 
+             \frac{f^{\prime\prime}(a)}{2!}(x - a)^2  
+             \\
+       &+      \cdots
+      \frac{f^{n}(a)}{n!}(x - a)^n 
+      \textbf{ Polynôme de Taylor}             
+  \end{align*}
+
+  \paragraph{Reste du polynôme de Taylor}
+  Soit le reste $R_n(x) =  f(x) - T_n(x)$, si 
+  $\lim\limits_{n \to+\infty }R_n(x) = 0 
+  \;\forall \;\; |x - a| < R $, \textbf{alors}  :
+  \[ 
+        f(x) = \sum_{n=0}^{\infty } 
+        \frac{f^{n}(a)}{n!}(x - a)^n   
+    \]
+
+    Le \textbf{reste du polynôme de Taylor} ou 
+    erreur sur l'approximation de Taylor 
+    $R_n(x)$ est la différence entre la valeur 
+    réelle de la fonction $f(x)$ 
+    et l'approximation donnée par le polynôme de 
+    Taylor de degré $n$ noté $T_n(x)$
+    Si ce reste tend vers zéro pour $n$ tendant 
+    vers l'infini, pour tout $x$ dans un 
+    intervalle autour de $a$ de rayon $R$, 
+    cela signifie que le polynôme de Taylor 
+    converge vers la fonction $f(x)$. dans cet 
+    intervalle. Cela indique que l'on peut 
+    représenter $f(x)$ aussi précisément que 
+    souhaité (dans cet intervalle) en augmentant 
+    le degré $n$ du polynôme de Taylor.
+
+
+  \paragraph{Inégalité de Taylor}
+  Soit $M, d \in \mathbb{R}$ deux 
+  \textbf{constantes positives}  
+  et $|f^{n+1}(x)| \leq M, \;\; \forall \;\; |x - a| < d$, 
+  \textbf{alors}
+  \[ 
+    |R_n(x)| \leq \frac{M}{(n+1)!}|x - a|^{n+1}, \;\; 
+        \forall \;\; |x - a | < d 
+  \]
+
+  L'\textbf{inégalité de Taylor} fournit une 
+  estimation de l'erreur (le reste $R_n(x)$)
+  commise en utilisant le polynôme de Taylor de 
+  degré $n$ pour approximer $f(x)$  
+  Si on connaît une borne supérieure 
+  $M$ pour la $(n+1)-ième $ dérivée de 
+  $f$ dans un intervalle autour de 
+  $a$, alors on peut utiliser cette borne pour 
+  estimer l'erreur maximale de l'approximation 
+  sur cet intervalle.
+
+  \paragraph{Corollaire de l'inégalité de Taylor}
+  Soient $N, c, d \in \mathbb{R}$ des 
+  \textbf{constantes positives}   
+  et soit $a \in \mathbb{R}$. Si 
+  $\forall \;\; n > N$ et $|x - a | < d$ 
+  \textbf{et}  si on a  
+  \[ |f^{n}(x)| \leq c^n \textbf{  ou } 
+  |f^{n}(x)| \leq c \text{ (version faible) } \]
+  Cela implique (dans la cas le plus fort) que 
+
+  \begin{align*}
+      f^{n+1}(x) \leq c^{n+1}
+  \end{align*}
+  \textbf{Et par conséquent}, $f(x)$ est 
+  représentée par sa série de 
+  Taylor sur $$(a - d, a + d)$$. 
+
+  et on a alors 
+
+  \begin{align*}
+    |R_n(x)| \leq \frac{c^{n+1}}{(n+1)!} 
+          \left|x - a \right|^{n+1}
+  \end{align*}
+
+  Le \textbf{ corollaire de l'inégalité de Taylor}
+  étend l'inégalité de Taylor en considérant 
+  des conditions sur les dérivées successives de 
+  $f$. Il indique que si les dérivées de 
+  $f$ au-delà d'un certain ordre $N$ croissent 
+  d'une manière contrôlée 
+  (soit proportionnellement à $c^n$
+  ou restent sous une certaine constante 
+  $c$), alors $f(x)$ peut être approximée par 
+  sa série de Taylor dans un intervalle autour de 
+  $a$
+
+
+
+
+  
 
 
 

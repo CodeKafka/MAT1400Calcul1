@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.1.25)  26 JAN 2024 19:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2024.1.25)  12 FEB 2024 13:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1746,64 +1746,64 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 48
 (/home/cryptopsy/texmf/tex/generic/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 546--546
-[]|\T1/lmtt/m/n/8 f(j, n) $\OMS/lmsy/m/n/8 !$ \T1/lmtt/m/n/8 0 (cas de
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 519.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 519.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 519.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 519.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 519.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 519.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 519.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 519.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 519.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 519.
+LaTeX Font Info:    Trying to load font information for T1+flr on input line 529.
+LaTeX Font Info:    No file T1flr.fd. on input line 529.
+
+
+LaTeX Font Warning: Font shape `T1/flr/m/n' undefined
+(Font)              using `T1/cmr/m/n' instead on input line 529.
+
+
+Overfull \hbox (43.18172pt too wide) detected at line 642
+[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 546--546
-[]|\T1/lmtt/m/n/8 f(j, k+1) $\OMS/lmsy/m/n/8 !$ \T1/lmtt/m/n/8 0
+Overfull \hbox (0.72786pt too wide) detected at line 664
+[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 546--546
-[]|\T1/lmtt/m/n/8 f(j+1, k) $\OMS/lmsy/m/n/8 !$ \T1/lmtt/m/n/8 ?
- []
+LaTeX Warning: Command \` invalid in math mode on input line 723.
 
+[2] [3] (./CheatSheet.aux)
 
-Underfull \hbox (badness 10000) in paragraph at lines 546--546
-[]|\T1/lmtt/m/n/8 f(j+1, k) $\OMS/lmsy/m/n/8 !$ \T1/lmtt/m/n/8 ?
- []
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 546--546
-[]|\T1/lmtt/m/n/8 f(j, n-1) $\OMS/lmsy/m/n/8 !$ \T1/lmtt/m/n/8 0 (cas de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 546--546
-[]|\T1/lmtt/m/n/8 f(j, k+1) $\OMS/lmsy/m/n/8 !$ \T1/lmtt/m/n/8 0
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 546--546
-[]|\T1/lmtt/m/n/8 f(j+1, k) $\OMS/lmsy/m/n/8 !$ \T1/lmtt/m/n/8 ?
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 546--546
-[]|\T1/lmtt/m/n/8 f(j+1, k) $\OMS/lmsy/m/n/8 !$ \T1/lmtt/m/n/8 ?
- []
-
-
-Overfull \hbox (5636.94151pt too wide) in paragraph at lines 546--547
-[][] 
- []
-
-[2] (./CheatSheet.aux) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 53483 strings out of 477956
- 1203835 string characters out of 5838909
- 1916639 words of memory out of 5000000
- 72688 multiletter control sequences out of 15000+600000
- 605221 words of font info for 85 fonts, out of 8000000 for 9000
+ 53452 strings out of 477956
+ 1203502 string characters out of 5838909
+ 1930640 words of memory out of 5000000
+ 72634 multiletter control sequences out of 15000+600000
+ 618452 words of font info for 103 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 105i,20n,120p,752b,861s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/cryptopsy/texmf/fonts/type1/public/lm/lmb10.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmex10.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmmi5.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmmi6.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmmi8.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmr10.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmr12.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmr17.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmr5.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmr6.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmr8.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmri8.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmsy5.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmsy6.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmsy8.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmtt8.pfb></home/cryptopsy/texmf/fonts/type1/public/mathdesign/mdput/md-utrma.pfb>
-Output written on CheatSheet.pdf (3 pages, 271785 bytes).
+ 105i,20n,120p,752b,889s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/cryptopsy/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmb10.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmex10.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmmi10.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmmi5.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmmi6.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmmi8.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmr10.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmr12.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmr17.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmr5.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmr6.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmr8.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmri7.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmri8.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmsy5.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmsy6.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmsy8.pfb></home/cryptopsy/texmf/fonts/type1/public/lm/lmtt8.pfb></home/cryptopsy/texmf/fonts/type1/public/mathdesign/mdput/md-utrma.pfb>
+Output written on CheatSheet.pdf (4 pages, 309793 bytes).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
- 133 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
+ 245 PDF objects out of 1000 (max. 8388607)
+ 162 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
